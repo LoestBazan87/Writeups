@@ -13,7 +13,7 @@ ping -c 1 172.17.0.2
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ```
-![image](https://github.com/user-attachments/assets/5e97d5e8-fbb6-4740-acb3-39d98f2d442b)
+![image](https://github.com/user-attachments/assets/c525eb41-4e8a-4a9a-b7f3-641906f1ed77)
 
     -oG AllPorts = save the output in the AllPorts file.
 
@@ -33,9 +33,9 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 
 ## **We found this
 
-![image](https://github.com/user-attachments/assets/013f3da6-da90-4e33-9f2e-4e63eebff744)
+![image](https://github.com/user-attachments/assets/bd4f52ab-0753-4d49-b9bd-0139eba5f9f9)
 ![image](https://github.com/user-attachments/assets/a84f31d8-5011-40c2-9aae-d2108ee249b3)
 
 
-
+USER' or 1=1-- -
 
