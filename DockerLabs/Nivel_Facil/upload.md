@@ -67,7 +67,7 @@ we open our malicious file
 
 ![image](https://github.com/user-attachments/assets/1b72181e-44c5-4d1a-bf28-54c93568d82c)
 
-we have conexion!!!
+we have connectionn!!!
 
 ![image](https://github.com/user-attachments/assets/03b641b6-97cd-4fc6-96db-941fd855c6ec)
 
