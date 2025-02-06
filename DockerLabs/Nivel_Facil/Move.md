@@ -22,3 +22,7 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ```bash
 nmap -sCV -p22,80,3000 172.17.0.2 -oN targeted
 ```
+![image](https://github.com/user-attachments/assets/c6ec6892-4d40-44bd-9122-a1378a0182c7)
+
+        -oN targeted = save the output in the targeted file.
+
