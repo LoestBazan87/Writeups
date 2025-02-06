@@ -25,3 +25,6 @@ nmap -sCV -p80 172.17.0.2 -oN targeted
 ```
 ![image](https://github.com/user-attachments/assets/be9abb3a-7a49-42e6-94d0-7993b2212504)
 
+with this we only conclude that our attack will focus only on port 80 which is the web page.
+---------------------
+
