@@ -14,3 +14,11 @@ ping -c 1 172.17.0.2
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ```
 ![image](https://github.com/user-attachments/assets/5e97d5e8-fbb6-4740-acb3-39d98f2d442b)
+
+    -oG AllPorts = save the output in the AllPorts file.
+
+## **Now we launch a port scan**
+
+```bash
+nmap -sCV -p22,80,3000 172.17.0.2 -oN targeted
+```
