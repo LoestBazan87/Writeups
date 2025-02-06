@@ -31,6 +31,7 @@ With this we only conclude that our attack will focus only on port 80 which is t
 ![image](https://github.com/user-attachments/assets/d60cf894-e4d3-41c4-be9a-1bb7dac9ae1c)
 
 It is a simple website to upload files and store them so we will upload test files to see what formats it accepts.
+
 ![image](https://github.com/user-attachments/assets/11ec69e4-ae17-42ea-992f-578f6ac82d21)
 ![image](https://github.com/user-attachments/assets/6fc481b1-b4d8-40fe-a6c6-b72f6366251f)
 ![image](https://github.com/user-attachments/assets/bb387ee1-c8a5-4c22-9d4d-53a600cb5005)
@@ -40,6 +41,8 @@ We have managed to upload the files but we do not know where they are so we will
 ```bash
 gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
 ```
+![image](https://github.com/user-attachments/assets/4cb06ba9-d0a3-44d3-8c88-542e7cafb43e)
+![image](https://github.com/user-attachments/assets/b99a440d-9023-4202-9584-f063d335b13a)
 
 
 
