@@ -29,5 +29,14 @@ nmap -sCV -p80 172.17.0.2 -oN targeted
 With this we only conclude that our attack will focus only on port 80 which is the web page, so we will analyze it.
 --------------------------
 ![image](https://github.com/user-attachments/assets/d60cf894-e4d3-41c4-be9a-1bb7dac9ae1c)
+It is a simple website to upload files and store them so we will upload test files to see what formats it accepts.
+![image](https://github.com/user-attachments/assets/11ec69e4-ae17-42ea-992f-578f6ac82d21)
+![image](https://github.com/user-attachments/assets/6fc481b1-b4d8-40fe-a6c6-b72f6366251f)
+![image](https://github.com/user-attachments/assets/bb387ee1-c8a5-4c22-9d4d-53a600cb5005)
+![image](https://github.com/user-attachments/assets/fdcaa1af-ce50-4426-82a0-024d6d5ffbdd)
+We have managed to upload the files but we do not know where they are so we will apply fuzzing to discover new directories.
+
+
+
 
 
