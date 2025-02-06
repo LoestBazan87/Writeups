@@ -6,7 +6,7 @@ We test the connection with the victim machine
 ping -c 1 172.17.0.2
 ```
 ![image](https://github.com/user-attachments/assets/ca42314b-8c8c-4636-8527-5ec06a9783e6)
-```
+
 ttl =64 ==> linux OS
 
 As the victim machine is within reach, we will send a request for a response with the ports that are open.
