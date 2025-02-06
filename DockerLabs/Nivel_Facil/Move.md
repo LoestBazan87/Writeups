@@ -20,9 +20,9 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ## **Now we launch a port scan**
 
 ```bash
-nmap -sCV -p22,80,3000 172.17.0.2 -oN targeted
+nmap -sCV -p21,22,80,3000 172.17.0.2 -oN targeted
 ```
-![image](https://github.com/user-attachments/assets/c6ec6892-4d40-44bd-9122-a1378a0182c7)
+![image](https://github.com/user-attachments/assets/16069e6e-a237-472d-9164-09a792d99da0)
 
         -oN targeted = save the output in the targeted file.
 
@@ -33,7 +33,7 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 
 ## **We found this
 
-![image](https://github.com/user-attachments/assets/bd4f52ab-0753-4d49-b9bd-0139eba5f9f9)
+![image](https://github.com/user-attachments/assets/1a43b527-a6a8-4f42-ac2f-74ba0d140919)
 ![image](https://github.com/user-attachments/assets/a84f31d8-5011-40c2-9aae-d2108ee249b3)
 
 
