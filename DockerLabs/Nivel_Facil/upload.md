@@ -57,6 +57,9 @@ We will upload our malicious file
 ![image](https://github.com/user-attachments/assets/608e6707-f2fd-49b9-a47e-3f74d27c12b6)
 
 we go into listening mode
+```bash
+nc -nlvp 443
+```
 
 ![image](https://github.com/user-attachments/assets/8a99c7f9-9376-45f2-9c6a-dba95150719b)
 
