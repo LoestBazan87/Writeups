@@ -36,6 +36,29 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 ![image](https://github.com/user-attachments/assets/1a43b527-a6a8-4f42-ac2f-74ba0d140919)
 ![image](https://github.com/user-attachments/assets/a84f31d8-5011-40c2-9aae-d2108ee249b3)
 
+## **We have a clue that tells us that the access would be in the address found, but we do not have access to it, but we still have an access by FPT in Port 21 since the anonymous user is active.**
 
-USER' or 1=1-- -
+```bash
+ftp 172.17.0.2
+```
+![image](https://github.com/user-attachments/assets/d3f9b147-7057-45e6-aedc-f24dcbcf7779)
+![image](https://github.com/user-attachments/assets/71ddd691-bb05-413a-b61c-a5785c6ac1d2)
+![image](https://github.com/user-attachments/assets/c556c458-a2b0-4f66-94e1-ec7734fde2bc)
+
+## **we will try to decrypt this file since it is a keepass database (DATABASE.kdbx).**
+```bash
+keepass2john database.kdbx > hash_database
+```
+![image](https://github.com/user-attachments/assets/ef81b728-e685-4995-a773-24b620ebcca2)
+
+## **we do not have a way by this method so we will continue to investigate the web.**
+
+
+
+
+
+
+
+
+
 
