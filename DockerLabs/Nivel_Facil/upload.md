@@ -7,10 +7,11 @@ ping -c 1 172.17.0.2
 ```
 ![image](https://github.com/user-attachments/assets/ca42314b-8c8c-4636-8527-5ec06a9783e6)
 ```
-PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
-64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.050 ms
+ttl =64 ==> linux OS
 
---- 172.17.0.2 ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 0.050/0.050/0.050/0.000 ms
+As the victim machine is within reach, we will send a request for a response with the ports that are open.
+```bash
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ```
+![image](https://github.com/user-attachments/assets/cb381a7f-8e0f-4e96-83b5-09b4d86167f5)
+
