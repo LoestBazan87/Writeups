@@ -26,3 +26,16 @@ nmap -sCV -p22,80,3000 172.17.0.2 -oN targeted
 
         -oN targeted = save the output in the targeted file.
 
+## **We will apply fuzzing to discover new directories.**
+```bash
+gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
+```
+
+## **We found this
+
+![image](https://github.com/user-attachments/assets/013f3da6-da90-4e33-9f2e-4e63eebff744)
+![image](https://github.com/user-attachments/assets/a84f31d8-5011-40c2-9aae-d2108ee249b3)
+
+
+
+
