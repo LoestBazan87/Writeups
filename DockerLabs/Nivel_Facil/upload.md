@@ -2,7 +2,7 @@
 ![Pasted image 20250205134718](https://github.com/user-attachments/assets/c559485b-954b-4aaa-b2c9-78db12544ae2)
 
 We test the connection with the victim machine
-------------------------
+
 ```bash
 ping -c 1 172.17.0.2
 ```
@@ -11,7 +11,7 @@ ping -c 1 172.17.0.2
 ttl =64 ==> linux OS
 
 As the victim machine is within reach, we will send a request for a response with the ports that are open.
------------------------------------
+
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 ```
@@ -20,14 +20,14 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 -oG AllPorts = save the output in the AllPorts file.
 
 Now we launch a port scan
---------------------------------------
+
 ```bash
 nmap -sCV -p80 172.17.0.2 -oN targeted
 ```
 ![image](https://github.com/user-attachments/assets/be9abb3a-7a49-42e6-94d0-7993b2212504)
 
 With this we only conclude that our attack will focus only on port 80 which is the web page, so we will analyze it.
---------------------------
+
 ![image](https://github.com/user-attachments/assets/d60cf894-e4d3-41c4-be9a-1bb7dac9ae1c)
 
 It is a simple website to upload files and store them so we will upload test files to see what formats it accepts.
@@ -37,7 +37,9 @@ It is a simple website to upload files and store them so we will upload test fil
 ![image](https://github.com/user-attachments/assets/fdcaa1af-ce50-4426-82a0-024d6d5ffbdd)
 
 We have managed to upload the files but we do not know where they are so we will apply fuzzing to discover new directories.
-
+```bash
+gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
+```
 
 
 
