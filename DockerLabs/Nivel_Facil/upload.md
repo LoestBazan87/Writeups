@@ -106,6 +106,11 @@ sudo -l
 ![image](https://github.com/user-attachments/assets/89003549-6cc4-405f-9eb1-0aec574ae83c)
 ![image](https://github.com/user-attachments/assets/f8135744-7786-4d69-876f-bcc989e65687)
 
+```bash
+sudo env /bin/sh
+```
+![image](https://github.com/user-attachments/assets/6d04adb6-8c59-495c-a212-fcac90a68b28)
+
 
 
 
