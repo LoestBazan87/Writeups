@@ -45,13 +45,33 @@ ftp 172.17.0.2
 ![image](https://github.com/user-attachments/assets/71ddd691-bb05-413a-b61c-a5785c6ac1d2)
 ![image](https://github.com/user-attachments/assets/c556c458-a2b0-4f66-94e1-ec7734fde2bc)
 
-## **we will try to decrypt this file since it is a keepass database (DATABASE.kdbx).**
+## **We will try to decrypt this file since it is a keepass database (DATABASE.kdbx).**
 ```bash
 keepass2john database.kdbx > hash_database
 ```
 ![image](https://github.com/user-attachments/assets/ef81b728-e685-4995-a773-24b620ebcca2)
 
-## **we do not have a way by this method so we will continue to investigate the web.**
+## **We do not have a way by this method so we will continue to investigate the web.**
+```bash
+whatweb http://172.17.0.2:3000/login
+```
+![image](https://github.com/user-attachments/assets/1b52be59-8ec5-4c2d-a295-2d02c4257589)
+
+```bash
+searchsploit Grafana 8.3.0
+```
+![image](https://github.com/user-attachments/assets/1cc42446-de5e-4758-b185-0260905b8ef5)
+
+## **We bring the exploit to our working folder**
+```bash
+locate 50581.py
+```
+```bash
+mv /usr/share/exploitdb/exploits/multiple/webapps/50581.py .
+```
+![image](https://github.com/user-attachments/assets/6713e0b1-7d88-442f-867e-ef10c611064f)
+
+
 
 
 
