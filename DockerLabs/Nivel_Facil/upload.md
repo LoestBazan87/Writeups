@@ -19,3 +19,9 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 -oG AllPorts = save the output in the AllPorts file.
 ------------------------------------
 
+Now we launch a port scan
+```bash
+nmap -sCV -p80 172.17.0.2 -oN targeted
+```
+![image](https://github.com/user-attachments/assets/be9abb3a-7a49-42e6-94d0-7993b2212504)
+
