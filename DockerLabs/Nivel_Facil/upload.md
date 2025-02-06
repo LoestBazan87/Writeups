@@ -28,4 +28,6 @@ nmap -sCV -p80 172.17.0.2 -oN targeted
 
 With this we only conclude that our attack will focus only on port 80 which is the web page, so we will analyze it.
 --------------------------
+![image](https://github.com/user-attachments/assets/d60cf894-e4d3-41c4-be9a-1bb7dac9ae1c)
+
 
