@@ -56,6 +56,16 @@ We will upload our malicious file
 ![image](https://github.com/user-attachments/assets/76debd5b-3d09-4248-b8be-841cb1454b39)
 ![image](https://github.com/user-attachments/assets/608e6707-f2fd-49b9-a47e-3f74d27c12b6)
 
+we go into listening mode
+
+![image](https://github.com/user-attachments/assets/8a99c7f9-9376-45f2-9c6a-dba95150719b)
+
+we open our malicious file
+
+![image](https://github.com/user-attachments/assets/1b72181e-44c5-4d1a-bf28-54c93568d82c)
+
+we have conexion!!!
+![image](https://github.com/user-attachments/assets/03b641b6-97cd-4fc6-96db-941fd855c6ec)
 
 
 
