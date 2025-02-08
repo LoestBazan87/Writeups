@@ -20,7 +20,7 @@ searchsploit -m unix/remote/49757.py
 ```
 ![Pasted image 20250121160005](https://github.com/user-attachments/assets/53e4cb06-34a5-41da-8f5f-76ac2d263be7)
 
-## **this is the scrip we downloaded **
+## **this is the scrip we downloaded**
 ![Pasted image 20250121160202](https://github.com/user-attachments/assets/5ef7a43d-6898-4795-9e92-122596f8ca2b)
 
 ## **now we will use it by assigning it the ip to attack since it is already configured**
