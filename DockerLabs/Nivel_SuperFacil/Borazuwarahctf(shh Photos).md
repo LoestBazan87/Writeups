@@ -14,6 +14,7 @@ nmap -sCV -p22,80 172.17.0.2 -oN targeted
 
 ## **let's see the source code**
 ``CTRL+U``
+
 ![Pasted image 20250122120309](https://github.com/user-attachments/assets/c378dee1-f088-4ad0-ae8c-67e4eaf990f2)
 
 ## **and we only have one image nothing specific so we will continue researching and fuzziong trying to identify hidden directories.**
