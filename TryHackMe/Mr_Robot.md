@@ -14,11 +14,12 @@ nmap -sCV -p22,80 172.17.0.2 -oN targeted
 ## **PORT 443**
 ![image](https://github.com/user-attachments/assets/69575dea-cc05-4273-bb14-422b2f5b3a88)
 
-
+## **Identifying the technologies, servers, and applications that make up the web**
 ```bash
 whatweb http://10.10.223.160
 ```
 ![image](https://github.com/user-attachments/assets/f44e3359-cc74-4743-b2c9-c5f3c9e20e4b)
+We did not find anything that could help us
 
 ```bash
 gobuster dir -u http://10.10.223.160/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
