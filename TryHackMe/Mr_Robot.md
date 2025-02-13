@@ -93,11 +93,13 @@ robot:c3fcd3d76192e4007dfb496cca67e13b
 ![image](https://github.com/user-attachments/assets/b28ef771-3125-4e09-ae60-1889ff2224c3)
 abcdefghijklmnopqrstuvwxyz
 
+## **with the information found, we change the user.**
 ```bash
 su robot
 ```
 ![image](https://github.com/user-attachments/assets/a500ac2d-0610-47b0-94e3-db17136edf65)
 
+## **elevating privileges**
 ```bash
 find / -perm -4000 2>/dev/null
 ```
