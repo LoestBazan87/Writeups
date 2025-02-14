@@ -11,11 +11,14 @@ ifconfig
 arp-scan -I eth0 --localnet --ignoredups
 ```
 ![image](https://github.com/user-attachments/assets/d80884f7-3ad7-40c9-80c1-777115ab4438)
+
+## **Discovering**
 ```bash
-ping -c 1192.168.1.220
+ping -c 192.168.1.220
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.220 -oG allports
 nmap -sCV -p22,80 192.168.1.220 -oN targeted
 ```
+![image](https://github.com/user-attachments/assets/df901688-8e24-46e8-b9e5-169d7845111a)
 
 
 
