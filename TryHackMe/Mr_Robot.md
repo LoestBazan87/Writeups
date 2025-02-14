@@ -2,9 +2,9 @@
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/5223b9fb-f5d2-4f5f-b961-af45d26dec7e"></picture></h1>
 
 ```bash
-ping -c 1 172.17.0.2
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allports
-nmap -sCV -p22,80 172.17.0.2 -oN targeted
+ping -c 1 10.10.223.160
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.223.160 -oG allports
+nmap -sCV -p80,443 10.10.223.160 -oN targeted
 ```
 ![image](https://github.com/user-attachments/assets/6509eeef-95c5-43e2-8b41-9294a4206893)
 
