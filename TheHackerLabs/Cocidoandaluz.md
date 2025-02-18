@@ -1,5 +1,7 @@
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/8309287c-1280-4c6c-aab7-4751ac0c2279"></picture></h1>
+
 ## **DISCOVERING**
+
 ```bash
 arp-scan -I eth0 --localnet --ignoredups
 ```
