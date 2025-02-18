@@ -28,7 +28,7 @@ nmap --script "vuln and safe" -p445 192.168.1.154
 ```
 ![image](https://github.com/user-attachments/assets/9a1730e1-08e0-42ca-a976-b546580284a3)
 
-## **We strarted Metasploit**
+## **We started Metasploit**
 ```bash
 sudo msfdb init && msfconsole
 ```
