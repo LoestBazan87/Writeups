@@ -130,4 +130,9 @@ we are looking for possible vulnerabilities that would allow us to elevate privi
 ![image](https://github.com/user-attachments/assets/0acbfa09-e55f-4641-b24a-b9f0413c8039)
 ![image](https://github.com/user-attachments/assets/ba2e0721-98c2-4add-bbdf-f65ad49a4f98)
 ![image](https://github.com/user-attachments/assets/dd5af650-cea6-4d71-863f-4aec5c2e74fc)
+![image](https://github.com/user-attachments/assets/652d3252-9497-4509-a954-d7800711cac4)
+![image](https://github.com/user-attachments/assets/d934c91a-9a51-4ee9-a6c2-1c85eb3c8996)
+we are looking for
+![image](https://github.com/user-attachments/assets/33011923-ceab-430f-bf75-435c7db9d2c6)
+![image](https://github.com/user-attachments/assets/28b173c4-5065-4b69-947e-de5e760b4722)
 
