@@ -27,6 +27,7 @@ nmap -sCV -p21,80,135,139,445,49152,49153,49154,49155,49156,49157 192.168.1.180 
 
 ``CRTL+U``
 <br>
+<br>
 ![image](https://github.com/user-attachments/assets/1ad23d93-a26a-4787-b8b8-d1a4b15e0d24)
 
 ## **Fuzzing**
