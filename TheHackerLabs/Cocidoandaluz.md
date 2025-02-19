@@ -22,7 +22,16 @@ nmap -sCV -p21,80,135,139,445,49152,49153,49154,49155,49156,49157 192.168.1.180 
 ```
 ![image](https://github.com/user-attachments/assets/1e8cfde2-0bc6-40e0-b81d-bb7623cdf150)
 
+## **PORT 80**
+![image](https://github.com/user-attachments/assets/f5a410d8-838e-4e26-aaf3-5adee82a12f6)
 
+``CRTL+U`` <br>
+![image](https://github.com/user-attachments/assets/1ad23d93-a26a-4787-b8b8-d1a4b15e0d24)
+
+## **Fuzzing**
+```bash
+gobuster dir -u http://192.168.1.180/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
+```
 
 
 
