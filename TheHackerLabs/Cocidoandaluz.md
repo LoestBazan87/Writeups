@@ -35,6 +35,14 @@ nmap -sCV -p21,80,135,139,445,49152,49153,49154,49155,49156,49157 192.168.1.180 
 ```bash
 gobuster dir -u http://192.168.1.180/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
 ```
+![image](https://github.com/user-attachments/assets/05ea476b-4c5b-4d69-a7ce-7100fca16a53)
+
+```bash
+whatweb https://192.168.1.180
+```
+![image](https://github.com/user-attachments/assets/a9485353-0de8-4b79-bd39-468b80a2a6aa)
+
+### **we didn't find anything relevant**
 
 
 
