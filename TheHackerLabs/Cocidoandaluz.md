@@ -44,14 +44,27 @@ whatweb https://192.168.1.180
 
 ### **we didn't find anything relevant**
 
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 445</h2>
 
+```bash
+sudo nmap --script "vuln and safe" -p445 192.168.1.180
+```
+![image](https://github.com/user-attachments/assets/a10cfba9-81df-4752-8595-0cfb87186bdc)
 
+### **not vulnerable to EternalBlue**
 
-rpcclient -U "" -N 172.17.0.2
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25">RPC Protocol</picture></h2>
+
+```bash
+rpcclient -U "" -N 192.168.1.180
 srvinfo
 querydispinfo
 enumdomusers
 getdompwinfo
+```
+![image](https://github.com/user-attachments/assets/c1825bc6-33ed-4720-8da0-ee814e5c3b52)
+
+### **we found nothing**
 
 
 
