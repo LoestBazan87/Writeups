@@ -1,6 +1,6 @@
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/8309287c-1280-4c6c-aab7-4751ac0c2279"></picture></h1>
 
-<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>DISCOVERING</h1>
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Reconnaissance & Scanning</h1>
 
 ```bash
 arp-scan -I eth0 --localnet --ignoredups
