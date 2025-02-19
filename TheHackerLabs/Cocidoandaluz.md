@@ -77,6 +77,7 @@ hydra -L /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.t
 ![image](https://github.com/user-attachments/assets/f87eb6f4-5b0e-4b8e-bcba-339876bf1268)
 
 USER:    info
+<br>
 PASSWD:  PolniyPizdec0211
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Gaining Access</h1>
