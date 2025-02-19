@@ -53,7 +53,7 @@ sudo nmap --script "vuln and safe" -p445 192.168.1.180
 
 ### **not vulnerable to EternalBlue**
 
-<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25">RPC Protocol</picture></h2>
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"></picture>RPC Protocol</h2>
 
 ```bash
 rpcclient -U "" -N 192.168.1.180
