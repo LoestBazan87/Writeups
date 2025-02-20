@@ -89,7 +89,7 @@ git show a4d900a
 ![image](https://github.com/user-attachments/assets/d01f05b0-960f-492b-aa69-978889012c18)
 
 #### **We finally have credentials**
-User:    lush@admin.com
+User:    lush@admin.com<br>
 Paswwd:  321
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Gaining Access</h1>
