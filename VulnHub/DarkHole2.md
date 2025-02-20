@@ -26,6 +26,17 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
+![image](https://github.com/user-attachments/assets/d42310cb-ab4b-46fe-8bf3-6754bf48e422)
+
+``CTRL+U``
+<br>
+<br>
+![image](https://github.com/user-attachments/assets/94f0d78a-3a61-48f3-b968-07132e49bc7a)
+![image](https://github.com/user-attachments/assets/87d49f77-cc5a-4aa5-9daf-eb9186bd72ed)
+![image](https://github.com/user-attachments/assets/c8ee583d-de18-4adf-ba69-4fabeb1977e3)
+We found a web login
+
+
 
 
 
