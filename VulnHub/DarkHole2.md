@@ -94,6 +94,8 @@ Paswwd:  321
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Gaining Access</h1>
 
+![image](https://github.com/user-attachments/assets/62bbcd1d-acd3-403d-bd08-3df3892d5cfe)
+![image](https://github.com/user-attachments/assets/3be015c2-096e-4a02-a50e-eb939a87385b)
 
 
 
