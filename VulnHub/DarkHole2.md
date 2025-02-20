@@ -34,7 +34,7 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 ![image](https://github.com/user-attachments/assets/94f0d78a-3a61-48f3-b968-07132e49bc7a)
 ![image](https://github.com/user-attachments/assets/87d49f77-cc5a-4aa5-9daf-eb9186bd72ed)
 ![image](https://github.com/user-attachments/assets/c8ee583d-de18-4adf-ba69-4fabeb1977e3)<br>
-We found a web login
+### **We found a web login**
 
 
 
