@@ -22,6 +22,9 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 ```
 ![image](https://github.com/user-attachments/assets/9d7977fb-b01e-4c8f-9237-8b3dcb959f48)
 
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
+
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
 
 
