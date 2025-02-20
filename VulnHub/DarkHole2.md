@@ -34,7 +34,27 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 ![image](https://github.com/user-attachments/assets/94f0d78a-3a61-48f3-b968-07132e49bc7a)
 ![image](https://github.com/user-attachments/assets/87d49f77-cc5a-4aa5-9daf-eb9186bd72ed)
 ![image](https://github.com/user-attachments/assets/c8ee583d-de18-4adf-ba69-4fabeb1977e3)<br>
-### **We found a web login**
+<br>
+We found a web login
+
+### **Fuzzing**
+```bash
+gobuster dir -u http://192.168.1.210/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt,py,php,sh,html,js
+```
+![image](https://github.com/user-attachments/assets/dbad34e3-bd2f-4f82-922e-97e197aca627)
+![image](https://github.com/user-attachments/assets/9821288a-4bc4-40c7-a197-5ee7129a8fde)
+![image](https://github.com/user-attachments/assets/8660a7ea-4ec9-4510-87c1-4c3c5c0d98dd)
+![image](https://github.com/user-attachments/assets/3216459f-0e6e-4f5b-a488-d0def89b5a41)
+![image](https://github.com/user-attachments/assets/2d8a2c67-dfc0-4bde-bfc9-61546d49ea94)
+![image](https://github.com/user-attachments/assets/e9754472-778d-4b38-aa5f-35641fe76548)
+
+```bash
+whatweb "http://192.168.1.210"
+```
+![image](https://github.com/user-attachments/assets/9897106f-25dd-4fda-8a3e-f2b6e8d2ef01)
+
+
+
 
 
 
