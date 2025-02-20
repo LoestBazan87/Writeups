@@ -24,6 +24,14 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
 
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 22</h2>
+
+![image](https://github.com/user-attachments/assets/fb033fd8-2155-4cbd-8e52-9f1a9a42d500)
+![image](https://github.com/user-attachments/assets/df1662e7-8ff5-4ea0-9eb2-bd2c1f0f207f)
+![image](https://github.com/user-attachments/assets/e7765820-701f-4ab2-bba6-afb011e37593)<br>
+<br>
+This machine is a Ubuntu Focal
+
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
 ![image](https://github.com/user-attachments/assets/d42310cb-ab4b-46fe-8bf3-6754bf48e422)
@@ -35,7 +43,7 @@ nmap -sCV -p22,80 192.168.1.210 -oN targeted
 ![image](https://github.com/user-attachments/assets/87d49f77-cc5a-4aa5-9daf-eb9186bd72ed)
 ![image](https://github.com/user-attachments/assets/c8ee583d-de18-4adf-ba69-4fabeb1977e3)<br>
 <br>
-We found a web login
+#### **We found a web login**
 
 ### **Fuzzing**
 ```bash
@@ -52,6 +60,19 @@ gobuster dir -u http://192.168.1.210/ -w /usr/share/wordlists/dirbuster/director
 whatweb "http://192.168.1.210"
 ```
 ![image](https://github.com/user-attachments/assets/9897106f-25dd-4fda-8a3e-f2b6e8d2ef01)
+
+### **.git**
+![image](https://github.com/user-attachments/assets/75deb6fc-8d73-4be7-9e1b-afd111bdf1e7)
+![image](https://github.com/user-attachments/assets/9a9828e5-b238-478c-8741-10275f16d3e8)
+<br>
+<br>
+#### **Download content for analysis**
+
+
+
+
+
+
 
 
 
