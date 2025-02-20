@@ -96,9 +96,19 @@ Paswwd:  321
 
 ![image](https://github.com/user-attachments/assets/62bbcd1d-acd3-403d-bd08-3df3892d5cfe)
 ![image](https://github.com/user-attachments/assets/3be015c2-096e-4a02-a50e-eb939a87385b)
+![image](https://github.com/user-attachments/assets/34a7d54f-cc17-4c3e-b134-e38095dd36e4)
+![image](https://github.com/user-attachments/assets/c507dd9a-8222-4133-95ff-066ad61d0ef3)
+![image](https://github.com/user-attachments/assets/c71a50cc-aa9c-4def-b4d4-91e10c90929b)
 
+#### **intercepting with burp, to see how everything goes from behind**
+```bash
+burpsuite &> /dev/null & disown
+```
+![image](https://github.com/user-attachments/assets/6a77d54a-b163-436c-814f-960d9682f3f9)
 
-
+#### **sending the captured information to the repeter**
+``CTRL+R``
+![image](https://github.com/user-attachments/assets/d12cb967-dce8-4099-9fce-1f0861d767b7)
 
 
 
