@@ -36,6 +36,7 @@ whatweb "http://192.168.1.206"
 ```
 ![image](https://github.com/user-attachments/assets/d3d9975f-ef95-4a56-ac5a-5b19837293d8)
 
+#### **let's analyze the image we found above**
 ![image](https://github.com/user-attachments/assets/337c0441-58c3-4b1b-a9cc-6f584b191796)<br>
 ![image](https://github.com/user-attachments/assets/12484bcf-49f2-4406-9d34-7745fdc4b601)
 ```bash
