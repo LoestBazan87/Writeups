@@ -208,7 +208,17 @@ curl "http://localhost:9999/index.php?cmd=whoami" -X GET; echo
 ```
 ![image](https://github.com/user-attachments/assets/06e3a4e0-f8a0-4555-b951-e134a1c07a2e)
 
+#### **We can see that there is an open port on the victim machine that we do not have access to from our attacking machine.**
+```bash
+nmap -p9999 --open -T5 -v 192.168.1.176
+```
+![image](https://github.com/user-attachments/assets/7e132b47-e3b1-42d2-97c9-79f2fd553ba3)
 
+#### **By using a tool we are going to make our PORT 9999 in the PORT 9999 of the victim machine to gain access and discover more things.**
+[chisel](https://github.com/jpillora/chisel)
+![image](https://github.com/user-attachments/assets/bafec1d9-00fc-42ae-9724-d284fc1d8105)
+![image](https://github.com/user-attachments/assets/a323543d-e20b-418f-b005-1b320f786f37)
+![image](https://github.com/user-attachments/assets/06d525ce-42a8-4814-a1c5-bc8f53d3a1e3)
 
 
 
