@@ -107,8 +107,10 @@ burpsuite &> /dev/null & disown
 ![image](https://github.com/user-attachments/assets/6a77d54a-b163-436c-814f-960d9682f3f9)
 
 #### **sending the captured information to the repeter**
-``CTRL+R``
+``CTRL+R``<br>
+
 ![image](https://github.com/user-attachments/assets/d12cb967-dce8-4099-9fce-1f0861d767b7)
+![image](https://github.com/user-attachments/assets/53c4bd44-77bc-480e-8af0-3954ba11a31a)
 
 
 
