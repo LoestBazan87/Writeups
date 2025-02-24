@@ -111,7 +111,9 @@ smbmap -H 192.168.1.206 -u helios -p qwerty --download helios/todo.txt
 ![image](https://github.com/user-attachments/assets/1435e5d8-5ec6-4bbc-b09b-b568321b1648)
 ![image](https://github.com/user-attachments/assets/a97e2fa8-4867-4bb6-b53d-85561e73515a)
 <br>
+<br>
 ``CTRL + U``
+<br>
 <br>
 ![image](https://github.com/user-attachments/assets/a7fb8009-44b5-4068-9efc-8e4bc496abd6)
 
@@ -134,6 +136,7 @@ whatweb "http://192.168.1.206/h3l105/"
 ```bash
 gobuster dir -u http://192.168.1.206/h3l105/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
 ```
+![image](https://github.com/user-attachments/assets/5080b808-1a03-4fdd-ac98-a5005769976e)
 
 
 
