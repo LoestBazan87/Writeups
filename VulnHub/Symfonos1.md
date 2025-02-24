@@ -57,6 +57,91 @@ gobuster dir -u http://192.168.1.206/ -w /usr/share/wordlists/dirbuster/director
 
 #### **We have not found anything that can help us at the moment**
 
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 445</h2>
+
+```bash
+smbmap -H 192.168.1.206
+```
+![image](https://github.com/user-attachments/assets/b66eba20-6e05-4740-b388-9d00a3f22b76)
+
+```bash
+smbmap -H 192.168.1.206 -r anonymous
+```
+![image](https://github.com/user-attachments/assets/02ed6711-5430-4525-b475-77f270c22ec7)
+
+```bash
+smbmap -H 192.168.1.206 --download anonymous/attention.txt
+```
+![image](https://github.com/user-attachments/assets/316386e3-3343-4c0e-9337-322771037ce9)
+![image](https://github.com/user-attachments/assets/4c420a34-3da4-4af0-8ff3-0e6468c006e9)
+
+#### **possible passwords and users**
+```bash
+nano users.txt
+
+helios
+Zeus
+```
+```bash
+nano passwords.txt
+
+epidioko
+qwerty
+baseball
+```
+![image](https://github.com/user-attachments/assets/16f07265-13d5-4e1a-ba44-9f33f1212edb)<br>
+
+#### **let's remember that we still have a helios user share that we don't have access to so let's try the passwords found**
+```bash
+smbmap -H 192.168.1.206 -u helios -p qwerty
+```
+![image](https://github.com/user-attachments/assets/77400a11-9d41-4ef4-8847-5efe753f56bf)
+
+```bash
+smbmap -H 192.168.1.206 -u helios -p qwerty -r helios
+```
+![image](https://github.com/user-attachments/assets/5da48e91-22f9-44b2-b364-21bff7fde9e7)
+
+```bash
+smbmap -H 192.168.1.206 -u helios -p qwerty --download helios/research.txt
+smbmap -H 192.168.1.206 -u helios -p qwerty --download helios/todo.txt
+```
+![image](https://github.com/user-attachments/assets/26d40dfe-9a33-43af-bd7d-e83b7f846a1e)
+![image](https://github.com/user-attachments/assets/4ee92ecd-2005-49a1-be49-dbec846c6dd0)
+![image](https://github.com/user-attachments/assets/1435e5d8-5ec6-4bbc-b09b-b568321b1648)
+![image](https://github.com/user-attachments/assets/a97e2fa8-4867-4bb6-b53d-85561e73515a)
+<br>
+``CTRL + U``
+<br>
+![image](https://github.com/user-attachments/assets/a7fb8009-44b5-4068-9efc-8e4bc496abd6)
+
+```bash
+ping -c 1 http://symfonos.local/
+```
+![image](https://github.com/user-attachments/assets/303a0a02-448a-470d-ad27-3b19f5dd03db)
+```bash
+nano /etc/hosts/
+```
+![image](https://github.com/user-attachments/assets/22984232-e1a9-4ba8-bd67-1349f5714bd3)
+![image](https://github.com/user-attachments/assets/8fe11ba1-788c-4e5a-aeb1-dbbae8c4f267)
+
+```bash
+whatweb "http://192.168.1.206/h3l105/"
+```
+![image](https://github.com/user-attachments/assets/57f2da01-d568-4bae-a778-bb65dce31a9b)
+
+### **Fuzzing**
+```bash
+gobuster dir -u http://192.168.1.206/h3l105/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+```
+
+
+
+
+
+
+
+
 
 
 
