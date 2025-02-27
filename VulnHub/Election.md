@@ -31,4 +31,41 @@ The -c flag specifies the number of echo request packets to send. In this case, 
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/75c4546b-c569-40ee-b151-01523b49f350"></picture></h1>
 
+```bash
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.208 -oG allPorts
+```
+```
+-p-
+This tells Nmap to scan all 65,535 TCP ports (from 0 to 65535). By default, Nmap only scans the most common 1,000 ports.
+
+--open
+This filters the results to only show open ports, ignoring closed or filtered ports.
+
+-sS
+This specifies a SYN scan (also called a half-open scan or stealth scan).
+Instead of fully establishing a TCP connection, Nmap sends an SYN packet and waits for a response.
+If the target responds with SYN-ACK, it means the port is open.
+If the target responds with RST, the port is closed.
+If no response or an ICMP error is received, the port may be filtered (firewall blocking it).
+
+--min-rate 5000
+This forces Nmap to send at least 5000 packets per second, making the scan faster.
+Without this, Nmap adjusts the speed automatically based on network conditions.
+
+-vvv
+This increases verbosity level (very very verbose).
+It provides real-time feedback while scanning.
+You will see results as they are discovered instead of waiting for the full scan to complete.
+
+-n
+This disables DNS resolution, making the scan faster.
+By default, Nmap tries to resolve IPs to hostnames, which can slow down the scan.
+
+-Pn
+This tells Nmap to skip the host discovery phase and assume the target is up.
+Normally, Nmap pings the target first to check if it is online.
+If a firewall is blocking pings, this option is useful to force a scan even if the target doesn’t respond to pings.
+
+-oG allPorts
+This tells Nmap to output the results in "Grepable" format and save them in a file called allPorts.
 
