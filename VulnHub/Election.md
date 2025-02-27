@@ -4,7 +4,8 @@
 
 ```bash
 arp-scan -I ens33 --localnet --ignoredups
-
+```
+```
 arp-scan
 This is a command-line tool used to scan a network for active devices using ARP (Address Resolution Protocol). It is useful for discovering devices on a local network.
 
