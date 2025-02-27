@@ -20,3 +20,15 @@ This option ensures that duplicate ARP responses from the same device are ignore
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/659c585c-6a4c-45de-a16c-1d617d9822ec"></picture></h1>
 
+```bash
+ping -c 1 192.168.1.208
+```
+```bash
+ping
+The ping command is used to check network connectivity between your machine and another device by sending ICMP (Internet Control Message Protocol) echo request packets.
+-c 1
+The -c flag specifies the number of echo request packets to send. In this case, -c 1 means only one packet will be sent.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/75c4546b-c569-40ee-b151-01523b49f350"></picture></h1>
+
+
