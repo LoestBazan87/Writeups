@@ -18,4 +18,5 @@ This tells arp-scan to scan the entire local network based on the subnet assigne
 --ignoredups
 This option ensures that duplicate ARP responses from the same device are ignored, which can be useful in noisy networks where duplicate replies might be common.
 ```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/659c585c-6a4c-45de-a16c-1d617d9822ec"></picture></h1>
 
