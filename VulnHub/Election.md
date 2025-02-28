@@ -68,4 +68,31 @@ If a firewall is blocking pings, this option is useful to force a scan even if t
 
 -oG allPorts
 This tells Nmap to output the results in "Grepable" format and save them in a file called allPorts.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/8d82754c-c473-46fb-9caa-9cc6d87d9e59"></picture></h1>
+
+```bash
+nmap -sCV -p22,80 192.168.1.208 -oN targeted
+```
+```
+-sC
+Enables Nmap’s default script scanning.
+This runs a set of default scripts to gather more information about detected services.
+Scripts can detect vulnerabilities, enumerate software versions, and check for misconfigurations.
+Equivalent to --script=default.
+
+-sV
+Performs version detection of services.
+It tries to determine the exact software version running on open ports.
+
+-p22,80
+Specifies that only ports 22 (SSH) and 80 (HTTP) should be scanned.
+This makes the scan faster and more targeted instead of scanning all ports.
+
+-oN targeted
+Saves the output in normal format to a file named targeted.
+You can later review this file for findings.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/29e653c3-db57-4da4-ba2d-5eefff223189"></picture></h1>
+
 
