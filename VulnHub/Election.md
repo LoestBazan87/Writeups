@@ -110,12 +110,47 @@ Runs all vulnerability detection scripts from Nmap’s "vuln" category.
 These scripts check for known security vulnerabilities, outdated software, and misconfigurations.
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/6a8e9a36-5fe7-464b-83a3-d03328864867"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/db041a5f-6890-4e32-88ef-a30db9c06af5"></picture></h1>
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
 
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/f214f692-ab8d-4fb8-9f2f-77bdc041e3f0"></picture></h1>
+<br>
+<br>
+``CTRL + u``
+<br>
+<br> 
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/05bfc834-9e2a-439a-ab0f-4c55c638095e"></picture></h1>
 
+### **Fuzzing**
+```bash
+gobuster dir -u http://192.168.1.208/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+```
+```
+gobuster dir
+Uses Gobuster in directory brute-forcing mode.
+It attempts to find hidden directories and files on the web server.
 
+-u http://192.168.1.208/
+Specifies the target URL (192.168.1.208).
+The scan will try to discover directories and files within this web application.
+
+-w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+Specifies the wordlist to use for directory brute-forcing.
+This file (directory-list-2.3-medium.txt) contains a large list of common web directories.
+Comes from SecLists, a well-known collection of security wordlists.
+
+-x txt,py,php,sh
+Adds file extensions to the scan.
+Gobuster will test each directory name with these extensions:
+.txt → Text files
+.py → Python scripts
+.php → PHP scripts
+.sh → Shell scripts
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/61fa3866-184b-435a-a290-480aeed127bf"></picture></h1>
+#### **we found these hidden directories**
 
 
