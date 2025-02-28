@@ -151,6 +151,7 @@ Gobuster will test each directory name with these extensions:
 .sh → Shell scripts
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/61fa3866-184b-435a-a290-480aeed127bf"></picture></h1>
+
 #### **we found these hidden directories**
 
 
