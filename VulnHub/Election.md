@@ -153,5 +153,77 @@ Gobuster will test each directory name with these extensions:
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/61fa3866-184b-435a-a290-480aeed127bf"></picture></h1>
 
 #### **we found these hidden directories**
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/fd88911e-c781-40c4-bc26-bfaa7ba1652f"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/c4b45fc4-7b2b-47b1-ad93-02dcbc1550b1"></picture></h1>
+
+#### **applying Fuzzing to the found website**
+```bash
+gobuster dir -u http://192.168.1.208/election/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+```
+```
+gobuster dir
+Uses Gobuster in directory brute-forcing mode.
+It attempts to find hidden directories and files on the web server.
+
+-u http://192.168.1.208/election/
+Specifies the target URL (192.168.1.208/election).
+The scan will try to discover directories and files within this web application.
+
+-w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+Specifies the wordlist to use for directory brute-forcing.
+This file (directory-list-2.3-medium.txt) contains a large list of common web directories.
+Comes from SecLists, a well-known collection of security wordlists.
+
+-x txt,py,php,sh
+Adds file extensions to the scan.
+Gobuster will test each directory name with these extensions:
+.txt → Text files
+.py → Python scripts
+.php → PHP scripts
+.sh → Shell scripts
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/b292ade7-99b2-4ad1-bd01-b9ac7e0bf871"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/dab836e5-50b3-4d5a-a916-0bf5146ec15c"></picture></h1>
+
+#### **applying Fuzzing to the found website**
+```bash
+gobuster dir -u http://192.168.1.208/election/admin/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+```
+```
+gobuster dir
+Uses Gobuster in directory brute-forcing mode.
+It attempts to find hidden directories and files on the web server.
+
+-u http://192.168.1.208/election/admin/
+Specifies the target URL (192.168.1.208/election/admin/).
+The scan will try to discover directories and files within this web application.
+
+-w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+Specifies the wordlist to use for directory brute-forcing.
+This file (directory-list-2.3-medium.txt) contains a large list of common web directories.
+Comes from SecLists, a well-known collection of security wordlists.
+
+-x txt,py,php,sh
+Adds file extensions to the scan.
+Gobuster will test each directory name with these extensions:
+.txt → Text files
+.py → Python scripts
+.php → PHP scripts
+.sh → Shell scripts
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
