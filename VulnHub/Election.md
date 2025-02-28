@@ -95,4 +95,27 @@ You can later review this file for findings.
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/29e653c3-db57-4da4-ba2d-5eefff223189"></picture></h1>
 
+#### **Looking for vulnerabilities with nmap**
+```bash
+sudo nmap -f --script vuln 192.168.1.208
+```
+```
+-f
+Enables packet fragmentation to split probe packets into smaller pieces.
+This can help evade firewalls or intrusion detection systems (IDS) by making it harder to detect the scan.
+Some firewalls drop fragmented packets, so results may vary.
+
+--script vuln
+Runs all vulnerability detection scripts from Nmap’s "vuln" category.
+These scripts check for known security vulnerabilities, outdated software, and misconfigurations.
+```
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/6a8e9a36-5fe7-464b-83a3-d03328864867"></picture></h1>
+
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
+
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
+
+
+
+
 
