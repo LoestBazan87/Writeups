@@ -1,4 +1,4 @@
-<hr style="border-color:red;"><h1 align="center"><picture><img src="https://github.com/user-attachments/assets/d6bb61d9-9d5e-46b4-8e7a-573a4116d536"></picture></h1>
+<hr style="border-color:red;"><h1 align="center"><img src="https://github.com/user-attachments/assets/d6bb61d9-9d5e-46b4-8e7a-573a4116d536"></h1>
 
 <hr style="border-color:red;"><h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Reconnaissance & Scanning</h1><hr style="border-color:red;">
 
@@ -101,9 +101,9 @@ This makes the scan faster and more targeted instead of scanning all ports.
 Saves the output in normal format to a file named targeted.
 You can later review this file for findings.
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture><br>22/tcp open  ssh     OpenSSH 8.2p1<br>80/tcp open  http  Apache httpd 2.4.41</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src="https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture><br>22/tcp open  ssh     OpenSSH 8.2p1<br>80/tcp open  http  Apache httpd 2.4.41</h3><hr style="border-color:red;">
 
-### **- Looking for vulnerabilities with nmap**
+### **- Looking for vulnerabilities with nmap:**
 ```bash
 sudo nmap -f --script vuln 192.168.1.117
 ```
