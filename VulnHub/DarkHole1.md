@@ -173,8 +173,15 @@ Gobuster will test each directory name with these extensions:
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/57f28ba3-cd01-4002-b662-51abd577a3be"></picture><br>We found some directories that could indicate that we can register and log in and even upload files.</h3>
 
 ### **- We found these hidden directories**
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c7842503-3451-4bc3-aca4-d68ca635b4b0"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d031ec9f-5aa4-4aaa-8d47-7c80fa79592e"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/71e91916-c5fd-4ab6-a285-71493f4a1e43"></picture></h3>
 
+### **- We will register to see the options provided by the user panel:**
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/bacd7482-d5ba-4628-9409-bb646195c530"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d1aa5f6c-48b2-4abf-989b-04ef4b4d3475"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/60c5654f-3922-4520-9f94-5ea01f17a32b"></picture></h3>
 
 
 
