@@ -1,9 +1,8 @@
 <h1 align="center"><picture><img src="https://github.com/user-attachments/assets/d6bb61d9-9d5e-46b4-8e7a-573a4116d536"></picture></h1>
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Reconnaissance & Scanning</h1>
-<br>
+
 #### **Network scanning to display connected devices**
-<br>
 
 ```bash
 arp-scan -I ens33 --localnet --ignoredups
