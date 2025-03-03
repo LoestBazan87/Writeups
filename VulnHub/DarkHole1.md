@@ -33,7 +33,7 @@ The ping command is used to check network connectivity between your machine and 
 -c 1
 The -c flag specifies the number of echo request packets to send. In this case, -c 1 means only one packet will be sent.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture><br>TTL = 64 ==> LINUX OS</h1><hr style="border-color:red;">
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture><br>TTL = 64 ==> LINUX OS</h3><hr style="border-color:red;">
 
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.117 -oG allPorts
