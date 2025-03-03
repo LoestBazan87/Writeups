@@ -115,3 +115,24 @@ These scripts check for known security vulnerabilities, outdated software, and m
 
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
+#### **Scanning port 80 for possible vulnerabilities**
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h1>
+
+#### **We analyze the source code for possible information leaks or developer notes.**
+<br>
+``CTRL+U``
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
