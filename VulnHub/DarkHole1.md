@@ -144,6 +144,7 @@ CTRL+U
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture><br>We find again a reference to the hidden directory login.php that we found earlier when doing the vulnerability scan with NMAP</h3>
 
+### **- We will apply web Fuzzing to do a scan for possible hidden directories.**
 
 
 
