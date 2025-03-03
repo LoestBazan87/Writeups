@@ -136,13 +136,13 @@ It can detect CMS platforms (WordPress, Joomla, etc.), web frameworks, web serve
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c150a134-0755-45e2-9d78-46ae63978def"></picture><br>We obtain some information but not very relevant.</h3>
 
 
-### **We analyze the source code for possible information leaks or developer notes.**
+### **- We analyze the source code for possible information leaks or developer notes:**
 
 ```bash
 CTRL+U
 ```
-<br>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture></h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture><br>We find again a reference to the hidden directory login.php that we found earlier when doing the vulnerability scan with NMAP</h3>
 
 
 
