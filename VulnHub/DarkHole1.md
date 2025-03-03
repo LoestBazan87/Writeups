@@ -20,6 +20,7 @@ This tells arp-scan to scan the entire local network based on the subnet assigne
 This option ensures that duplicate ARP responses from the same device are ignored, which can be useful in noisy networks where duplicate replies might be common.
 ```
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/c8c8d542-3047-44ee-bbb5-00c1f6362d76"></picture></h1>
+<br>
 
 ```bash
 ping -c 1 192.168.1.117
