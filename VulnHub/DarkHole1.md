@@ -23,6 +23,8 @@ This option ensures that duplicate ARP responses from the same device are ignore
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c8c8d542-3047-44ee-bbb5-00c1f6362d76"></picture><br>We are working in VMware, so we only have one IP discovered 192.168.1.117</h3><hr style="border-color:red;">
 <br>
 
+### **Verifying the connectivity of the discovered device**
+
 ```bash
 ping -c 1 192.168.1.117
 ```
@@ -32,7 +34,7 @@ The ping command is used to check network connectivity between your machine and 
 -c 1
 The -c flag specifies the number of echo request packets to send. In this case, -c 1 means only one packet will be sent.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture><br>TTL = 64 ==> LINUX OS</h1><hr style="border-color:red;">
 
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.117 -oG allPorts
