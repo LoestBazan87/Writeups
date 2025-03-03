@@ -119,10 +119,8 @@ These scripts check for known security vulnerabilities, outdated software, and m
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h1>
 
 #### **We analyze the source code for possible information leaks or developer notes.**
-<br>
 
 `` CTRL+U ``
-<br>
 <br>
 <h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture></h1>
 
