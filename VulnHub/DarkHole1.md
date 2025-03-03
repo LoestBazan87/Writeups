@@ -18,10 +18,10 @@ This tells arp-scan to scan the entire local network based on the subnet assigne
 --ignoredups
 This option ensures that duplicate ARP responses from the same device are ignored, which can be useful in noisy networks where duplicate replies might be common.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/659c585c-6a4c-45de-a16c-1d617d9822ec"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/c8c8d542-3047-44ee-bbb5-00c1f6362d76"></picture></h1>
 
 ```bash
-ping -c 1 192.168.1.208
+ping -c 1 192.168.1.117
 ```
 ```bash
 ping
@@ -29,14 +29,14 @@ The ping command is used to check network connectivity between your machine and 
 -c 1
 The -c flag specifies the number of echo request packets to send. In this case, -c 1 means only one packet will be sent.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/75c4546b-c569-40ee-b151-01523b49f350"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture></h1>
 
 ```bash
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.208 -oG allPorts
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.117 -oG allPorts
 ```
 ```
 -p-
-This tells Nmap to scan all 65,535 TCP ports (from 0 to 65535). By default, Nmap only scans the most common 1,000 ports.
+This tells Nmap to scan all 65535 TCP ports (from 0 to 65535). By default, Nmap only scans the most common 1,000 ports.
 
 --open
 This filters the results to only show open ports, ignoring closed or filtered ports.
@@ -69,10 +69,10 @@ If a firewall is blocking pings, this option is useful to force a scan even if t
 -oG allPorts
 This tells Nmap to output the results in "Grepable" format and save them in a file called allPorts.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/8d82754c-c473-46fb-9caa-9cc6d87d9e59"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/b9472eda-78e1-4980-b242-40ad7a55f4c3"></picture></h1>
 
 ```bash
-nmap -sCV -p22,80 192.168.1.208 -oN targeted
+nmap -sCV -p22,80 192.168.1.117 -oN targeted
 ```
 ```
 -sC
@@ -93,11 +93,11 @@ This makes the scan faster and more targeted instead of scanning all ports.
 Saves the output in normal format to a file named targeted.
 You can later review this file for findings.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/29e653c3-db57-4da4-ba2d-5eefff223189"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture></h1>
 
 #### **Looking for vulnerabilities with nmap**
 ```bash
-sudo nmap -f --script vuln 192.168.1.208
+sudo nmap -f --script vuln 192.168.1.117
 ```
 ```
 -f
@@ -109,8 +109,7 @@ Some firewalls drop fragmented packets, so results may vary.
 Runs all vulnerability detection scripts from Nmap’s "vuln" category.
 These scripts check for known security vulnerabilities, outdated software, and misconfigurations.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/6a8e9a36-5fe7-464b-83a3-d03328864867"></picture></h1>
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/db041a5f-6890-4e32-88ef-a30db9c06af5"></picture></h1>
+<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/1074dfbc-d980-4883-9657-cbd29ddf8688"></picture></h1>
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
 
