@@ -126,6 +126,15 @@ These scripts check for known security vulnerabilities, outdated software, and m
 ### **Scanning port 80 for possible vulnerabilities**
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h3>
 
+```bash
+whatweb "192.168.1.117"
+```
+```bash
+WhatWeb is a fingerprinting tool used to identify web technologies running on a target server or website. It can detect CMS platforms (WordPress, Joomla, etc.), web frameworks, web server versions, programming languages, and more.
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c150a134-0755-45e2-9d78-46ae63978def"></picture><br>We obtain some information but not very relevant.</h3>
+
+
 ### **We analyze the source code for possible information leaks or developer notes.**
 
 ```bash
