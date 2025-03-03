@@ -129,9 +129,10 @@ These scripts check for known security vulnerabilities, outdated software, and m
 ```bash
 whatweb "192.168.1.117"
 ```
-``
-WhatWeb is a fingerprinting tool used to identify web technologies running on a target server or website. It can detect CMS platforms (WordPress, Joomla, etc.), web frameworks, web server versions, programming languages, and more.
-``
+```
+WhatWeb is a fingerprinting tool used to identify web technologies running on a target server or website.
+It can detect CMS platforms (WordPress, Joomla, etc.), web frameworks, web server versions, programming languages, and more.
+```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c150a134-0755-45e2-9d78-46ae63978def"></picture><br>We obtain some information but not very relevant.</h3>
 
 
