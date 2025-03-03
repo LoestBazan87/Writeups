@@ -187,8 +187,15 @@ Gobuster will test each directory name with these extensions:
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f702ea81-3a47-432d-b56c-a7bcaa60b291"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/718cdadf-f46a-4eec-b53a-a4c1848d98dd"></picture></h3>
-<h3 align="center"><picture><img src = ""></picture></h3>
-<h3 align="center"><picture><img src = ""></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/3c266d3d-64f4-4668-bca8-201276d2e929"></picture><br>change the passwd</h3>
+
+### **We didn't find any method to crack the machine, so with Burpsuite we will intercept the password change request to see how the information travels:** 
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/27d9b0f6-638d-4af8-b3ed-1d04f5a6a5a0"></picture><br>The web behind when changing the password is sending the new password with an id that are linked so we could try to send the new password with a user that exists and as we know the admin user is always part of any environment as nro 1..</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/586873d2-e441-436c-b98e-98196d6766cd"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/6cc54863-1269-4989-928f-96c3958ca734"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c5d83f89-a718-42ce-b8ed-fc1bab0c78a6"></picture><br>Now we have access to a panel from where we can upload our own files to obtain remote command execution.</h3>
 
 
 
