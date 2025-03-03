@@ -183,7 +183,12 @@ Gobuster will test each directory name with these extensions:
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d1aa5f6c-48b2-4abf-989b-04ef4b4d3475"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/60c5654f-3922-4520-9f94-5ea01f17a32b"></picture></h3>
 
+### **- Let's do some tests:**
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f702ea81-3a47-432d-b56c-a7bcaa60b291"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/718cdadf-f46a-4eec-b53a-a4c1848d98dd"></picture></h3>
+<h3 align="center"><picture><img src = ""></picture></h3>
+<h3 align="center"><picture><img src = ""></picture></h3>
 
 
 
