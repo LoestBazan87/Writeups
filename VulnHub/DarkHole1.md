@@ -218,3 +218,17 @@ CTRL+I
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/787a72e8-95a4-401a-a80c-45d9938813e5"></picture><br>By means of a REGEX we can incorporate a column that tells us the status of the file upload so we will know when it was successful.</h3>
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/91d1ffdc-8ed6-4b6a-a49c-979069bd1b53"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/54f122a6-edc8-4635-b681-16e3006269c0"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/94670640-dd90-48e6-b2bc-000b9b72bd47"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/9d3334b9-0725-4a3c-8287-b3d7d86036ed"></picture></h3>
+
+
+
+
+
+
+
+
+
+
+
