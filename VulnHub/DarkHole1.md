@@ -145,7 +145,34 @@ CTRL+U
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture><br>We find again a reference to the hidden directory login.php that we found earlier when doing the vulnerability scan with NMAP</h3>
 
 ### **- We will apply web Fuzzing to do a scan for possible hidden directories.**
+```bash
+gobuster dir -u http://192.168.1.117/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+```
+```
+gobuster dir
+Uses Gobuster in directory brute-forcing mode.
+It attempts to find hidden directories and files on the web server.
 
+-u http://192.168.1.117/
+Specifies the target URL (192.168.1.208).
+The scan will try to discover directories and files within this web application.
+
+-w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+Specifies the wordlist to use for directory brute-forcing.
+This file (directory-list-2.3-medium.txt) contains a large list of common web directories.
+Comes from SecLists, a well-known collection of security wordlists.
+
+-x txt,py,php,sh
+Adds file extensions to the scan.
+Gobuster will test each directory name with these extensions:
+.txt → Text files
+.py → Python scripts
+.php → PHP scripts
+.sh → Shell scripts
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/57f28ba3-cd01-4002-b662-51abd577a3be"></picture><br>We found some directories that could indicate that we can register and log in and even upload files.</h3>
+
+### **- We found these hidden directories**
 
 
 
