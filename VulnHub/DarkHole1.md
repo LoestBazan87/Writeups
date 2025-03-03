@@ -22,7 +22,7 @@ This option ensures that duplicate ARP responses from the same device are ignore
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c8c8d542-3047-44ee-bbb5-00c1f6362d76"></picture><br>We are working in VMware, so we only have one IP discovered 192.168.1.117</h3><hr style="border-color:red;">
 
-### *** Verifying the connectivity of the discovered device:**
+### **- Verifying the connectivity of the discovered device:**
 
 ```bash
 ping -c 1 192.168.1.117
@@ -35,7 +35,7 @@ The -c flag specifies the number of echo request packets to send. In this case, 
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture><br>TTL = 64 ==> LINUX OS</h3><hr style="border-color:red;">
 
-### *** Scanning of the discovered device to find all open ports to find possible access routes:**
+### **- Scanning of the discovered device to find all open ports to find possible access routes:**
 
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.117 -oG allPorts
@@ -75,7 +75,9 @@ If a firewall is blocking pings, this option is useful to force a scan even if t
 -oG allPorts
 This tells Nmap to output the results in "Grepable" format and save them in a file called allPorts.
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/b9472eda-78e1-4980-b242-40ad7a55f4c3"></picture>Accessible ports 22 & 80</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/b9472eda-78e1-4980-b242-40ad7a55f4c3"></picture><br>Accessible ports 22 & 80</h3><hr style="border-color:red;">
+
+### **- Analysis of the open ports found on the discovered device to get more information on the services running on those ports:**
 
 ```bash
 nmap -sCV -p22,80 192.168.1.117 -oN targeted
@@ -99,7 +101,7 @@ This makes the scan faster and more targeted instead of scanning all ports.
 Saves the output in normal format to a file named targeted.
 You can later review this file for findings.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture></h1>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture><br>22/tcp open  ssh     OpenSSH 8.2p1<br>80/tcp open  http  Apache httpd 2.4.41</h3><hr style="border-color:red;">
 
 #### **Looking for vulnerabilities with nmap**
 ```bash
