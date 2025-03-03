@@ -201,6 +201,20 @@ Gobuster will test each directory name with these extensions:
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0cfa99f6-5d20-4fdb-a6de-f7825bd4ac7e"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0de4843f-7e82-44b8-abad-914fb16e24f0"></picture><br>This warning could be predetermined by the developer so we will try to upload the file with another type of extension that will allow us to upload it.</h3>
 
+### **- We will upload a file again and this time we will intercept the request with Burpsuite to do a brute force attack to find the extension that we can upload:**
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e7eff100-9117-499f-b17d-baa5243fb070"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c0527740-b781-4aba-bde9-c0083390e438"></picture><br>We send the request to the intruder</h3>
 
+```bash
+CTRL+I
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/912aee89-1c96-46b8-9559-c281774ab54e"></picture><br>We select the part where we want the injection to be replaced to test different types of extensions</h3>
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/37e9fab4-6b49-42e7-a920-56aae765f2b1"></picture><br>We add the different types of files we want to test</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/606a8026-11b3-40ce-99dd-2c54b1606445"></picture></h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/787a72e8-95a4-401a-a80c-45d9938813e5"></picture><br>By means of a REGEX we can incorporate a column that tells us the status of the file upload so we will know when it was successful.</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/91d1ffdc-8ed6-4b6a-a49c-979069bd1b53"></picture></h3>
