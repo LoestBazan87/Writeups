@@ -103,7 +103,7 @@ You can later review this file for findings.
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture><br>22/tcp open  ssh     OpenSSH 8.2p1<br>80/tcp open  http  Apache httpd 2.4.41</h3><hr style="border-color:red;">
 
-#### **Looking for vulnerabilities with nmap**
+### **- Looking for vulnerabilities with nmap**
 ```bash
 sudo nmap -f --script vuln 192.168.1.117
 ```
@@ -117,20 +117,21 @@ Some firewalls drop fragmented packets, so results may vary.
 Runs all vulnerability detection scripts from Nmap’s "vuln" category.
 These scripts check for known security vulnerabilities, outdated software, and misconfigurations.
 ```
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/1074dfbc-d980-4883-9657-cbd29ddf8688"></picture></h1>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1074dfbc-d980-4883-9657-cbd29ddf8688"></picture><br>We found only possible hidden directories</h3><hr style="border-color:red;">
 
-<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1>
+<h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1><hr style="border-color:red;">
 
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
 
-#### **Scanning port 80 for possible vulnerabilities**
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h1>
+### **Scanning port 80 for possible vulnerabilities**
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h3>
 
-#### **We analyze the source code for possible information leaks or developer notes.**
+### **We analyze the source code for possible information leaks or developer notes.**
 
 `` CTRL+U ``
 <br>
-<h1 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture></h1>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture></h3>
+
 
 
 
