@@ -197,8 +197,9 @@ Gobuster will test each directory name with these extensions:
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/6cc54863-1269-4989-928f-96c3958ca734"></picture></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c5d83f89-a718-42ce-b8ed-fc1bab0c78a6"></picture><br>Now we have access to a panel from where we can upload our own files to obtain remote command execution.</h3>
 
-
-
+### **- Now that we have access to upload files we will try uploading a .php file to put our code inside to gain access to the machine**
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0cfa99f6-5d20-4fdb-a6de-f7825bd4ac7e"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0de4843f-7e82-44b8-abad-914fb16e24f0"></picture><br>This warning could be predetermined by the developer so we will try to upload the file with another type of extension that will allow us to upload it.</h3>
 
 
 
