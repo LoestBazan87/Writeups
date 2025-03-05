@@ -266,10 +266,18 @@ stty rows 61 columns 184
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/84f3faef-e3b2-4e60-bdc5-0b54f04e2488"></picture><br>Searching in the system we found a potential access way by using the id_rsa but we do not have access to this information because we do not have the necessary permissions.</h3>
 <br>
 
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5909cbab-17fe-4269-904c-e6905b37ee18"></picture>Here we can see that we have access to the toto file so we will analyze what it does.</h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5909cbab-17fe-4269-904c-e6905b37ee18"></picture><br>Here we can see that we have access to the toto file so we will analyze what it does.</h3>
 <br>
 
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5e6bf97b-b50f-4106-b814-281cdf065854"></picture>we can see that this file (compiled binary) that works as the id command shows us or gives us access to john's uid information. </h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5e6bf97b-b50f-4106-b814-281cdf065854"></picture><br>We can see that this file (compiled binary) that works as the id command shows us or gives us access to john's uid information. </h3>
 <br>
 
-<h3 align="center"><picture><img src = ""></picture></h3>
+### **- Since we assume that the binary is the same function as the ID command only that this points to the user JOHN, what we can do is modify the $PATH since this is the path that all programs follow in search of whether they are in the system, thus achieving that before using the ID command uses a command created by us that will be called ID.**
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e75c4e47-b047-4a0a-b123-16fb2007c362"></picture></h3>
+
+### **- Here we can already observe how the $PATH has changed, now what we have left is to create the file that we will call “id” and we will elevate its privileges so that it is found, inside that file we will put a code that assigns us a shell with elevated privileges.**
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/118101bd-76d6-4638-b12b-f43de6121813"></picture></h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/3e8420fb-4bf4-435a-ba04-d7a4cd17f979"></picture><br>by executing the “toto” binary we are now the user “john”.</h3>
