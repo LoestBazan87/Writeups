@@ -266,4 +266,10 @@ stty rows 61 columns 184
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/84f3faef-e3b2-4e60-bdc5-0b54f04e2488"></picture><br>Searching in the system we found a potential access way by using the id_rsa but we do not have access to this information because we do not have the necessary permissions.</h3>
 <br>
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5909cbab-17fe-4269-904c-e6905b37ee18"></picture>Here we can see that we have access to the toto file so we will analyze what it does.</h3>
+<br>
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/5e6bf97b-b50f-4106-b814-281cdf065854"></picture>we can see that this file (compiled binary) that works as the id command shows us or gives us access to john's uid information. </h3>
+<br>
+
+<h3 align="center"><picture><img src = ""></picture></h3>
