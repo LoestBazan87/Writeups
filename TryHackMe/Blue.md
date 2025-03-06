@@ -132,7 +132,7 @@ run
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/a0d1071b-0d56-46bc-87eb-4b67fea89c95"></picture><br></h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1573f02f-7934-4fb1-b381-a901d02f1926"></picture><br>we already have a session by meterpreter like user System.</h3>
 
-### **- e search for all hashes in the system**
+### **- We search for all hashes in the system**
 ```bash
 hashdump
 ```
