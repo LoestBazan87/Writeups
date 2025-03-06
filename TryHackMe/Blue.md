@@ -143,4 +143,9 @@ Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/82b66b35-dfed-4191-98f1-55ea6c1968b6"></picture><br>Using the web https://crackstation.net/ we will break these hashes</h3>
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/739058b1-6131-4368-81e1-c3f7d3760145"></picture><br></h3>
+
+### **- looking for the flags:**
+```bash
+search -f flag*.txt
+```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/9d38f110-d603-4b26-947d-5af09520ff2f"></picture><br></h3>
