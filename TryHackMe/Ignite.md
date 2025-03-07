@@ -178,4 +178,4 @@ reset xterm
 export TERM=xterm
 export SHELL=bash
 ```
-<h3 align="center"><picture><img src = "!https://github.com/user-attachments/assets/f28fe028-5533-44b7-8742-89ea78218a6c"></picture><br>We are in like a root</h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f28fe028-5533-44b7-8742-89ea78218a6c"></picture><br>We are in like a root</h3>
