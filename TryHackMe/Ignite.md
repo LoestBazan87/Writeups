@@ -139,3 +139,15 @@ ls /home/www-data
 cat /home/www-data/flag.txt
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/a5a8a433-dc0d-4c85-9ddd-6fc57539a415"></picture><br></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f57686c8-2894-474c-9662-6e33f048d80b"></picture><br>Even though we have the root credentials we do not have access to</h3>
+
+### **- Now we will create a reverse shell that will give us access from the terminal of our attacking machine:**
+
+```bash
+https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f1c71928-734c-46a5-a28a-1b53d5fb914e"></picture><br>We are going to go to the web previously mentioned and copy the code changing the selected lines in the image, we will call this file “shell.php”.</h3>
+
+
+
