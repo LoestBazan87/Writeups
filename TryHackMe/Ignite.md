@@ -132,10 +132,10 @@ python3 50477.py -u http://10.10.69.210
 cat fuel/application/config/database.php 
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/bbe86f48-8313-45b8-b772-a82bb9783dff"></picture><br>We already have root credentials</h3>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/739058b1-6131-4368-81e1-c3f7d3760145"></picture><br></h3>
 
 ### **- looking for the flags:**
 ```bash
-search -f flag*.txt
+ls /home/www-data
+cat /home/www-data/flag.txt
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/9d38f110-d603-4b26-947d-5af09520ff2f"></picture><br></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/a5a8a433-dc0d-4c85-9ddd-6fc57539a415"></picture><br></h3>
